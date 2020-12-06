@@ -37,8 +37,19 @@ namespace ItemCreator
         /// <param name="path">Path</param>
         public virtual void Export(string path)
         {
+            System.IO.Directory.Delete(path + "\\" + Name, true);
+            System.IO.Directory.CreateDirectory(path + "\\" + Name);
+
             using (FileStream fileStream = new FileStream(path + "\\" + Name + "\\ini.dat", FileMode.Create))
             {}
+
+            System.IO.Directory.Delete(path + "\\" + Name, true);
+        }
+
+        public virtual void Import(string path)
+        {
+            using (FileStream fileStream = new FileStream(path + "\\ini.dat", FileMode.Open))
+            { }
         }
 
         /// <summary>
@@ -52,6 +63,16 @@ namespace ItemCreator
             Export(appData + "Temp\\");
 
             ZipFile.CreateFromDirectory(appData + "Temp\\" + Name, path + Name + ".ii");
+        }
+
+        public virtual void Load(string path)
+        {
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
+
+            System.IO.Directory.Delete(appData + path.Substring(0,path.LastIndexOf('.')), true);
+            ZipFile.ExtractToDirectory(path, appData + path.Substring(0, path.LastIndexOf('.')));
+            Import(appData + path.Substring(0, path.LastIndexOf('.')));
+            System.IO.Directory.Delete(appData + path.Substring(0, path.LastIndexOf('.')), true);
         }
     }
 }
