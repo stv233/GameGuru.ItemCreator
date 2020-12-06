@@ -52,7 +52,7 @@ namespace ItemCreator
         /// <param name="path">Path</param>
         public virtual void Import(string path)
         {
-            Name = path.Substring(0, path.LastIndexOf('\\'));
+            Name = path.Substring(path.LastIndexOf('\\') + 1);
             using (FileStream fileStream = new FileStream(path + "\\ini.dat", FileMode.Open))
             { }
         }
@@ -74,7 +74,7 @@ namespace ItemCreator
         /// Load item from file
         /// </summary>
         /// <param name="path">Path</param>
-        public virtual void Load(string path)
+        public virtual void Open(string path)
         {
             string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
 

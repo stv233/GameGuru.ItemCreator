@@ -112,7 +112,7 @@ namespace ItemCreator
         /// <param name="path">Path</param>
         public override void Import(string path)
         {
-            Name = path.Substring(0, path.LastIndexOf('\\'));
+            Name = path.Substring(path.LastIndexOf('\\') + 1);
             string[] fileString = File.ReadAllLines(path + "\\ini.dat");
             foreach (string line in fileString)
             {
@@ -164,7 +164,7 @@ namespace ItemCreator
         /// Load item from file
         /// </summary>
         /// <param name="path">Path</param>
-        public override void Load(string path)
+        public override void Open(string path)
         {
             string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
 
