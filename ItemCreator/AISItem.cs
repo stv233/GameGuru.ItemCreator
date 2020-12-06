@@ -73,6 +73,9 @@ namespace ItemCreator
         /// <param name="path">Path</param>
         public override void Export(string path)
         {
+            System.IO.Directory.Delete(path + "\\" + Name,true);
+            System.IO.Directory.CreateDirectory(path + "\\" + Name);
+
             using (System.IO.FileStream fileStream = new System.IO.FileStream(path + "\\" + Name + "\\ini.dat", System.IO.FileMode.Create))
             {
                 using (System.IO.StreamWriter streamWriter = new System.IO.StreamWriter(fileStream))

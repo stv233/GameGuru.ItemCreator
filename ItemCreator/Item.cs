@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.IO;
+using System.IO.Compression;
 
 namespace ItemCreator
 {
@@ -38,6 +39,19 @@ namespace ItemCreator
         {
             using (FileStream fileStream = new FileStream(path + "\\" + Name + "\\ini.dat", FileMode.Create))
             {}
+        }
+
+        /// <summary>
+        /// Save item to file.
+        /// </summary>
+        /// <param name="path"></param>
+        public virtual void Save(string path)
+        {
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
+
+            Export(appData + "Temp\\");
+
+            ZipFile.CreateFromDirectory(appData + "Temp\\" + Name, path + Name + ".asii");
         }
     }
 }
