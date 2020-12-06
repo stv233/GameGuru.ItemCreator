@@ -7,13 +7,25 @@ using System.IO;
 
 namespace ItemCreator
 {
+    /// <summary>
+    /// Inventory item.
+    /// </summary>
     class Item
     {
         public string Name { get;  private set; }
 
-        public virtual void CreateINI(string path)
+        /// <summary>
+        /// Inventory item.
+        /// </summary>
+        /// <param name="name">Item name</param>
+        public Item(string name)
         {
-            using (FileStream fileStream = new FileStream(path + "ini.dat", FileMode.Create))
+            Name = name;
+        }
+
+        public virtual void Export(string path)
+        {
+            using (FileStream fileStream = new FileStream(path + "\\" + Name + "\\ini.dat", FileMode.Create))
             {}
         }
     }
