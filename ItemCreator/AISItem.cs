@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO;
 using System.IO.Compression;
 
 namespace ItemCreator
@@ -74,12 +75,12 @@ namespace ItemCreator
         /// <param name="path">Path</param>
         public override void Export(string path)
         {
-            System.IO.Directory.Delete(path + "\\" + Name,true);
-            System.IO.Directory.CreateDirectory(path + "\\" + Name);
+            Directory.Delete(path + "\\" + Name,true);
+            Directory.CreateDirectory(path + "\\" + Name);
 
-            using (System.IO.FileStream fileStream = new System.IO.FileStream(path + "\\" + Name + "\\ini.dat", System.IO.FileMode.Create))
+            using (var fileStream = new FileStream(path + "\\" + Name + "\\ini.dat", System.IO.FileMode.Create))
             {
-                using (System.IO.StreamWriter streamWriter = new System.IO.StreamWriter(fileStream))
+                using (var streamWriter = new StreamWriter(fileStream))
                 {
                     streamWriter.WriteLine("ItemType=" + @Type.ToString());
                     streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
@@ -90,16 +91,57 @@ namespace ItemCreator
                 }
             }
 
-            using (System.IO.FileStream fileStream = new System.IO.FileStream(path + "\\" + Name + "\\img.png", System.IO.FileMode.Create))
+            using (var fileStream = new FileStream(path + "\\" + Name + "\\img.png", System.IO.FileMode.Create))
             {
                 Icon.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
             }
 
-            using (System.IO.FileStream fileStream = new System.IO.FileStream(path + "\\" + Name + "\\des.txt", System.IO.FileMode.Create))
+            using (var fileStream = new FileStream(path + "\\" + Name + "\\des.txt", System.IO.FileMode.Create))
             {
-                using (System.IO.StreamWriter streamWriter = new System.IO.StreamWriter(fileStream))
+                using (StreamWriter streamWriter = new StreamWriter(fileStream))
                 {
                     streamWriter.Write(Description);
+                }
+            }
+
+        }
+
+        /// <summary>
+        /// Import item.
+        /// </summary>
+        /// <param name="path">Path</param>
+        public override void Import(string path)
+        {
+            Name = path.Substring(0, path.LastIndexOf('\\'));
+            string[] fileString = File.ReadAllLines(path + "\\ini.dat");
+            foreach (string line in fileString)
+            {
+                if (line.Contains("ItemType"))
+                {
+                    @Type = Convert.ToUInt16(line.Substring(line.IndexOf('=') + 1));
+                }
+                else if (line.Contains("ItemEffect"))
+                {
+                    Effect = line.Substring(line.IndexOf('=') + 1);
+                }
+                else if (line.Contains("EffectCount"))
+                {
+                    EffectCount = Convert.ToInt32(line.Substring(line.IndexOf('=') + 1));
+                }
+                else if (line.Contains("Icon"))
+                {
+                    using (var fileStream = new FileStream(path + "\\" + line.Substring(line.IndexOf('=') + 1),FileMode.Open))
+                    {
+                        Icon = System.Drawing.Image.FromStream(fileStream);
+                    }
+                }
+                else if (line.Contains("CanDeleted"))
+                {
+                    CanDeleted = !(line.Substring(line.IndexOf('=') + 1) == "0");
+                }
+                else if (line.Contains("Description"))
+                {
+                    Description = File.ReadAllText(path + "\\" + line.Substring(line.IndexOf('=') + 1));
                 }
             }
 
@@ -118,5 +160,18 @@ namespace ItemCreator
             ZipFile.CreateFromDirectory(appData + "Temp\\" + Name, path + Name + ".asii");
         }
 
+        /// <summary>
+        /// Load item from file
+        /// </summary>
+        /// <param name="path">Path</param>
+        public override void Load(string path)
+        {
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
+
+            System.IO.Directory.Delete(appData + path.Substring(0, path.LastIndexOf('.')), true);
+            ZipFile.ExtractToDirectory(path, appData + path.Substring(0, path.LastIndexOf('.')));
+            Import(appData + path.Substring(0, path.LastIndexOf('.')));
+            System.IO.Directory.Delete(appData + path.Substring(0, path.LastIndexOf('.')), true);
+        }
     }
 }

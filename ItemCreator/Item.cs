@@ -13,7 +13,7 @@ namespace ItemCreator
     /// </summary>
     class Item
     {
-        public string Name { get;  private set; }
+        public string Name { get;  protected set; }
 
         /// <summary>
         /// Inventory item.
@@ -46,8 +46,13 @@ namespace ItemCreator
             System.IO.Directory.Delete(path + "\\" + Name, true);
         }
 
+        /// <summary>
+        /// Import item.
+        /// </summary>
+        /// <param name="path">Path</param>
         public virtual void Import(string path)
         {
+            Name = path.Substring(0, path.LastIndexOf('\\'));
             using (FileStream fileStream = new FileStream(path + "\\ini.dat", FileMode.Open))
             { }
         }
@@ -65,6 +70,10 @@ namespace ItemCreator
             ZipFile.CreateFromDirectory(appData + "Temp\\" + Name, path + Name + ".ii");
         }
 
+        /// <summary>
+        /// Load item from file
+        /// </summary>
+        /// <param name="path">Path</param>
         public virtual void Load(string path)
         {
             string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
