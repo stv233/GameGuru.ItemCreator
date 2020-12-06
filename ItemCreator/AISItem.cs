@@ -67,7 +67,39 @@ namespace ItemCreator
             Description = description;
         }
 
-        
+        /// <summary>
+        /// Exports an item.
+        /// </summary>
+        /// <param name="path">Path</param>
+        public override void Export(string path)
+        {
+            using (System.IO.FileStream fileStream = new System.IO.FileStream(path + "\\" + Name + "\\ini.dat", System.IO.FileMode.Create))
+            {
+                using (System.IO.StreamWriter streamWriter = new System.IO.StreamWriter(fileStream))
+                {
+                    streamWriter.WriteLine("ItemType=" + @Type.ToString());
+                    streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
+                    streamWriter.WriteLine("EffectCount=" + EffectCount.ToString());
+                    streamWriter.WriteLine("Icon=img.png");
+                    streamWriter.WriteLine("CanDeleted=" + Convert.ToInt32(CanDeleted).ToString());
+                    streamWriter.WriteLine("Description=des.txt");
+                }
+            }
+
+            using (System.IO.FileStream fileStream = new System.IO.FileStream(path + "\\" + Name + "\\img.png", System.IO.FileMode.Create))
+            {
+                Icon.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+            }
+
+            using (System.IO.FileStream fileStream = new System.IO.FileStream(path + "\\" + Name + "\\des.txt", System.IO.FileMode.Create))
+            {
+                using (System.IO.StreamWriter streamWriter = new System.IO.StreamWriter(fileStream))
+                {
+                    streamWriter.Write(Description);
+                }
+            }
+
+        }
 
     }
 }
