@@ -18,7 +18,7 @@ namespace ItemCreator
         /// <summary>
         /// List of items included in project.
         /// </summary>
-        public virtual Dictionary<string, Item> ListOfItems { get; set; }
+        public virtual Dictionary<string, IItem> ListOfItems { get; set; }
 
         /// <summary>
         /// Item creator project.
@@ -32,7 +32,7 @@ namespace ItemCreator
             Directory.Delete(appData + "\\Projects\\" + Name, true);
             Directory.CreateDirectory(appData + "\\Projects\\" + Name);
 
-            ListOfItems = new Dictionary<string, Item>();
+            ListOfItems = new Dictionary<string, IItem>();
         }
 
         ~Project()
@@ -79,7 +79,7 @@ namespace ItemCreator
 
             foreach (string itemName in ProjectIni)
             {
-                Item item = new Item(itemName);
+                IItem item = new object() as IItem;
                 item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
                 ListOfItems.Add(itemName, item);
             }
