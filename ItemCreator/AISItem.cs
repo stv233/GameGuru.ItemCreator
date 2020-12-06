@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.IO.Compression;
 
 namespace ItemCreator
 {
@@ -102,6 +103,19 @@ namespace ItemCreator
                 }
             }
 
+        }
+
+        /// <summary>
+        /// Save item to file.
+        /// </summary>
+        /// <param name="path">Path</param>
+        public override void Save(string path)
+        {
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
+
+            Export(appData + "Temp\\");
+
+            ZipFile.CreateFromDirectory(appData + "Temp\\" + Name, path + Name + ".asii");
         }
 
     }

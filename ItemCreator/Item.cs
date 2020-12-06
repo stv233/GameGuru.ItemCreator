@@ -44,14 +44,14 @@ namespace ItemCreator
         /// <summary>
         /// Save item to file.
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="path">Path</param>
         public virtual void Save(string path)
         {
             string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
 
             Export(appData + "Temp\\");
 
-            ZipFile.CreateFromDirectory(appData + "Temp\\" + Name, path + Name + ".asii");
+            ZipFile.CreateFromDirectory(appData + "Temp\\" + Name, path + Name + ".ii");
         }
     }
 }
