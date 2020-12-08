@@ -8,6 +8,9 @@ using System.IO.Compression;
 
 namespace ItemCreator
 {
+    /// <summary>
+    /// Item creator project.
+    /// </summary>
     class Project
     {
         /// <summary>
