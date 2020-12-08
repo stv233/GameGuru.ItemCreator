@@ -11,6 +11,16 @@ namespace ItemCreator
     class Project
     {
         /// <summary>
+        /// Project types.
+        /// </summary>
+        public enum Types
+        {
+            AIS,
+            Pro,
+            Simple
+        }
+
+        /// <summary>
         /// Project name.
         /// </summary>
         public string Name { get; set; }
@@ -21,15 +31,24 @@ namespace ItemCreator
         public virtual Dictionary<string, IItem> ListOfItems { get; set; }
 
         /// <summary>
+        /// Current project type.
+        /// </summary>
+        public Types @Type { get; set; }
+
+        /// <summary>
         /// Item creator project.
         /// </summary>
         /// <param name="name"></param>
         public Project(string name)
         {
-            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
+             string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\Stv233\\ItemCreator\\";
             Name = name;
 
-            Directory.Delete(appData + "\\Projects\\" + Name, true);
+            try
+            {
+                Directory.Delete(appData + "\\Projects\\" + Name, true);
+            }
+            catch { }
             Directory.CreateDirectory(appData + "\\Projects\\" + Name);
 
             ListOfItems = new Dictionary<string, IItem>();
@@ -37,8 +56,12 @@ namespace ItemCreator
 
         ~Project()
         {
-            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
-            Directory.Delete(appData + "\\Projects\\" + Name, true);
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\Stv233\\ItemCreator\\";
+            try
+            {
+                Directory.Delete(appData + "\\Projects\\" + Name, true);
+            }
+            catch { }
         }
 
         /// <summary>
@@ -47,11 +70,12 @@ namespace ItemCreator
         /// <param name="path">Path</param>
         public void Save(string path)
         {
-            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
-            using (var fileStream = new FileStream(appData + "\\Projects\\" + Name +"\\ProjectIni", FileMode.Create))
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\Stv233\\ItemCreator\\";
+            using (var fileStream = new FileStream(appData + "\\Projects\\" + Name +"\\ProjectData", FileMode.Create))
             {
                 using (var streamWriter = new StreamWriter(fileStream))
                 {
+                    streamWriter.WriteLine(Type.ToString());
                     foreach (string itemName in ListOfItems.Keys)
                     {
                         streamWriter.WriteLine(itemName);
@@ -59,7 +83,15 @@ namespace ItemCreator
                 }
             }
 
-            ZipFile.CreateFromDirectory(appData + "\\Projects\\" + Name + ".iip", path);
+            try
+            {
+                ZipFile.CreateFromDirectory(appData + "\\Projects\\" + Name, path);
+            }
+            catch
+            {
+                File.Delete(path);
+                ZipFile.CreateFromDirectory(appData + "\\Projects\\" + Name, path);
+            }
         }
 
         /// <summary>
@@ -68,20 +100,47 @@ namespace ItemCreator
         /// <param name="path"></param>
         public void Open(string path)
         {
-            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData);
-            Directory.Delete(appData + "\\Projects\\" + Name, true);
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\Stv233\\ItemCreator\\";
 
             Name = path.Substring(path.LastIndexOf("\\") + 1, path.LastIndexOf(".") - path.LastIndexOf("\\") - 1);
+            try
+            {
+                Directory.Delete(appData + "\\Projects\\" + Name, true);
+            }
+            catch { }
             ZipFile.ExtractToDirectory(path, appData + "\\Projects\\" + Name);
             ListOfItems.Clear();
 
-            string[] ProjectIni = File.ReadAllLines(appData + "\\Projects\\" + Name + "\\ProjectIni");
+            string[] ProjectData = File.ReadAllLines(appData + "\\Projects\\" + Name + "\\ProjectData");
 
-            foreach (string itemName in ProjectIni)
+            if (ProjectData[0] == "AIS")
             {
-                IItem item = new object() as IItem;
-                item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
-                ListOfItems.Add(itemName, item);
+                Type = Types.AIS;
+            }
+            else if (ProjectData[0] == "Pro")
+            {
+                Type = Types.Pro;
+            }
+            else if (ProjectData[0] == "Simple")
+            {
+                Type = Types.Simple;
+            }
+            else
+            {
+                throw new System.Exception("Unknown project type");
+            }
+
+            Array.Copy(ProjectData, 1, ProjectData, 0, ProjectData.Length - 1);
+            Array.Resize<string>(ref ProjectData, ProjectData.Length - 1);
+
+            foreach (string itemName in ProjectData)
+            {
+                if (Type == Types.AIS)
+                {
+                    AISItem item = new AISItem(itemName);
+                    item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
+                    ListOfItems.Add(itemName, item);
+                }
             }
         }
 
@@ -91,10 +150,21 @@ namespace ItemCreator
         /// <param name="path"></param>
         public void ExportAllItems(string path)
         {
-            foreach (Item item in ListOfItems.Values)
+            foreach (IItem item in ListOfItems.Values)
             {
                 item.Export(path);
             }
+        }
+
+        /// <summary>
+        /// Adds an item to the project.
+        /// </summary>
+        /// <param name="item"></param>
+        public void AddItem(IItem item)
+        {
+             string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\Stv233\\ItemCreator\\";
+            ListOfItems[item.Name] = item;
+            item.Export(appData + "\\Projects\\" + Name);
         }
     }
 }

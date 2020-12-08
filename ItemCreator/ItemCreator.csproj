@@ -47,7 +47,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AISProject.cs" />
+    <Compile Include="AISItem.cs" />
+    <Compile Include="AISItemCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="frMain.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,8 +58,12 @@
       <DependentUpon>frMain.cs</DependentUpon>
     </Compile>
     <Compile Include="IItem.cs" />
+    <Compile Include="IItemCreationDialog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Project.cs" />
+    <Compile Include="ProjectControlPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frMain.resx">
       <DependentUpon>frMain.cs</DependentUpon>
