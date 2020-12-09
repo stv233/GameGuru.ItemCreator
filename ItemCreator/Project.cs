@@ -138,15 +138,21 @@ namespace ItemCreator
 
             foreach (string itemName in ProjectData)
             {
-                if (Type == Types.AIS)
+                if (Type == Types.Simple)
                 {
-                    AISItem item = new AISItem(itemName);
+                    SimpleItem item = new SimpleItem(itemName);
                     item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
                     ListOfItems.Add(itemName, item);
                 }
-                else if (Type == Types.Simple)
+                else if (Type == Types.Pro)
                 {
-                    SimpleItem item = new SimpleItem(itemName);
+                    ProItem item = new ProItem(itemName);
+                    item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
+                    ListOfItems.Add(itemName, item);
+                }
+                else if (Type == Types.AIS)
+                {
+                    AISItem item = new AISItem(itemName);
                     item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
                     ListOfItems.Add(itemName, item);
                 }

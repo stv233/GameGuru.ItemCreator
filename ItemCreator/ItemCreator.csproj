@@ -61,6 +61,9 @@
     <Compile Include="IItemCreationDialog.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProItem.cs" />
+    <Compile Include="ProItemCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Project.cs" />
     <Compile Include="ProjectControlPanel.cs">
       <SubType>Component</SubType>

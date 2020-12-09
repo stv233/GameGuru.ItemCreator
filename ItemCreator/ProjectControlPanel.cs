@@ -68,10 +68,10 @@ namespace ItemCreator
             };
             btCreateItem.Click += (s, e) =>
             {
-                if (Project.Type == Project.Types.AIS)
+                if (Project.Type == Project.Types.Simple)
                 {
-                    AISItem item = new AISItem("My new item");
-                    AISItemCreationDialog creationDialog = new AISItemCreationDialog(item);
+                    var item = new SimpleItem("My new item");
+                    var creationDialog = new SimpleItemCreationDialog(item);
 
 
 
@@ -96,12 +96,11 @@ namespace ItemCreator
                             break;
                         }
                     }
-
                 }
-                else if (Project.Type == Project.Types.Simple)
+                else if (Project.Type == Project.Types.Pro)
                 {
-                    SimpleItem item = new SimpleItem("My new item");
-                    SimpleItemCreationDialog creationDialog = new SimpleItemCreationDialog(item);
+                    var item = new ProItem("My new item");
+                    var creationDialog = new ProItemCreationDialog(item);
 
 
 
@@ -126,6 +125,36 @@ namespace ItemCreator
                             break;
                         }
                     }
+                }
+                else if (Project.Type == Project.Types.AIS)
+                {
+                    var item = new AISItem("My new item");
+                    var creationDialog = new AISItemCreationDialog(item);
+
+
+
+                    while (true)
+                    {
+                        DialogResult result = creationDialog.ShowDialog();
+                        if (result == DialogResult.OK)
+                        {
+                            if (!Project.ListOfItems.ContainsKey(creationDialog.Item.Name))
+                            {
+                                Project.AddItem(creationDialog.Item);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("An item with the given name already exists.",
+                                    "Item creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+
                 }
 
                 ReloadItems();
@@ -150,13 +179,18 @@ namespace ItemCreator
                 try
                 {
                     IItem item;
-                    if (Project.Type == Project.Types.AIS)
+                    if (Project.Type == Project.Types.Simple)
                     {
-                         item = new AISItem("My new item");
+                        item = new SimpleItem("My new item");
                     }
-                    else if (Project.Type == Project.Types.Simple)
+                    
+                    else if (Project.Type == Project.Types.Pro)
                     {
-                         item = new SimpleItem("My new item");
+                        item = new ProItem("My new item");
+                    }
+                    else if (Project.Type == Project.Types.AIS)
+                    {
+                        item = new AISItem("My new item");
                     }
                     else
                     {
@@ -320,10 +354,9 @@ namespace ItemCreator
                 btEdit.Top = btDelete.Top;
                 btEdit.Click += (s, e) =>
                 {
-
-                    if (Project.Type == Project.Types.AIS)
+                    if (Project.Type == Project.Types.Simple)
                     {
-                        var dialog = new AISItemCreationDialog((AISItem)item);
+                        var dialog = new SimpleItemCreationDialog((SimpleItem)item);
                         dialog.CanChangeName = false;
 
 
@@ -335,9 +368,24 @@ namespace ItemCreator
                             return;
                         }
                     }
-                    else if (Project.Type == Project.Types.Simple)
+                    
+                    else if (Project.Type == Project.Types.Pro)
                     {
-                        var dialog = new SimpleItemCreationDialog((SimpleItem)item);
+                        var dialog = new ProItemCreationDialog((ProItem)item);
+                        dialog.CanChangeName = false;
+
+
+                        if (dialog.ShowDialog() == DialogResult.OK)
+                        {
+                            Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            ProjectChanged = true;
+                            ReloadItems();
+                            return;
+                        }
+                    }
+                    else if (Project.Type == Project.Types.AIS)
+                    {
+                        var dialog = new AISItemCreationDialog((AISItem)item);
                         dialog.CanChangeName = false;
 
 

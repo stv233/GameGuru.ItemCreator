@@ -101,6 +101,7 @@ namespace ItemCreator
                 Directory.Delete(path + "\\" + Name, true);
             }
             catch { }
+
             Directory.CreateDirectory(path + "\\" + Name);
 
             using (var fileStream = new FileStream(path + "\\" + Name + "\\init.dat", System.IO.FileMode.Create))
@@ -112,7 +113,7 @@ namespace ItemCreator
                     streamWriter.WriteLine("EffectCount=" + EffectCount.ToString());
                     streamWriter.WriteLine("Icon=img.png");
                     streamWriter.WriteLine("CanDeleted=" + Convert.ToInt32(CanDeleted).ToString());
-                    streamWriter.WriteLine("Description=des.txt");
+                    streamWriter.WriteLine("DescriptionImage=des.png");
                 }
             }
 
