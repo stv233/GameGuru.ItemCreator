@@ -98,49 +98,58 @@ namespace ItemCreator
         {
             try
             {
-                Directory.Delete(path + "\\" + Name, true);
+                try
+                {
+                    Directory.Delete(path + "\\" + Name, true);
+                }
+                catch { }
+
+                Directory.CreateDirectory(path + "\\" + Name);
+
+                using (var fileStream = new FileStream(path + "\\" + Name + "\\init.dat", System.IO.FileMode.Create))
+                {
+                    using (var streamWriter = new StreamWriter(fileStream))
+                    {
+                        streamWriter.WriteLine("ItemType=" + @Type.ToString());
+                        streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
+                        streamWriter.WriteLine("EffectCount=" + EffectCount.ToString());
+                        streamWriter.WriteLine("Icon=img.png");
+                        streamWriter.WriteLine("CanDeleted=" + Convert.ToInt32(CanDeleted).ToString());
+                        streamWriter.WriteLine("DescriptionImage=des.png");
+                    }
+                }
+
+                using (var fileStream = new FileStream(path + "\\" + Name + "\\img.png", System.IO.FileMode.Create))
+                {
+                    if (Icon != null)
+                    {
+                        Icon.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                    else
+                    {
+                        Icon = new System.Drawing.Bitmap(1, 1);
+                        Icon.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                }
+
+                using (var fileStream = new FileStream(path + "\\" + Name + "\\des.png", System.IO.FileMode.Create))
+                {
+                    if (Description != null)
+                    {
+                        Description.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                    else
+                    {
+                        Description = new System.Drawing.Bitmap(1, 1);
+                        Description.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                }
             }
-            catch { }
-
-            Directory.CreateDirectory(path + "\\" + Name);
-
-            using (var fileStream = new FileStream(path + "\\" + Name + "\\init.dat", System.IO.FileMode.Create))
+            catch(Exception e)
             {
-                using (var streamWriter = new StreamWriter(fileStream))
-                {
-                    streamWriter.WriteLine("ItemType=" + @Type.ToString());
-                    streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
-                    streamWriter.WriteLine("EffectCount=" + EffectCount.ToString());
-                    streamWriter.WriteLine("Icon=img.png");
-                    streamWriter.WriteLine("CanDeleted=" + Convert.ToInt32(CanDeleted).ToString());
-                    streamWriter.WriteLine("DescriptionImage=des.png");
-                }
-            }
-
-            using (var fileStream = new FileStream(path + "\\" + Name + "\\img.png", System.IO.FileMode.Create))
-            {
-                if (Icon != null)
-                {
-                    Icon.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
-                }
-                else
-                {
-                    Icon = new System.Drawing.Bitmap(1, 1);
-                    Icon.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
-                }
-            }
-
-            using (var fileStream = new FileStream(path + "\\" + Name + "\\des.png", System.IO.FileMode.Create))
-            {
-                if (Description != null)
-                {
-                    Description.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
-                }
-                else
-                {
-                    Description = new System.Drawing.Bitmap(1, 1);
-                    Description.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
-                }
+                System.Windows.Forms.MessageBox.Show("An error occurred while exporting the item.\n" +
+                    e.Message + "\nTry exporting the item again.", "Export error",
+                    System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
 
         }

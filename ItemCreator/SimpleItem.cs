@@ -98,42 +98,51 @@ namespace ItemCreator
         {
             try
             {
-                Directory.Delete(path + "\\" + Name, true);
-            }
-            catch { }
-            Directory.CreateDirectory(path + "\\" + Name);
+                try
+                {
+                    Directory.Delete(path + "\\" + Name, true);
+                }
+                catch { }
+                Directory.CreateDirectory(path + "\\" + Name);
 
-            using (var fileStream = new FileStream(path + "\\" + Name + "\\init.dat", System.IO.FileMode.Create))
-            {
-                using (var streamWriter = new StreamWriter(fileStream))
+                using (var fileStream = new FileStream(path + "\\" + Name + "\\init.dat", System.IO.FileMode.Create))
                 {
-                    streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
-                    streamWriter.WriteLine("EffectCount=" + EffectCount.ToString());
-                    streamWriter.WriteLine("Image=img.png");
-                    streamWriter.WriteLine("CanUsed=" + CanUsed.ToString());
-                    streamWriter.WriteLine("CanDeleted=" + Convert.ToInt32(CanDeleted).ToString());
+                    using (var streamWriter = new StreamWriter(fileStream))
+                    {
+                        streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
+                        streamWriter.WriteLine("EffectCount=" + EffectCount.ToString());
+                        streamWriter.WriteLine("Image=img.png");
+                        streamWriter.WriteLine("CanUsed=" + CanUsed.ToString());
+                        streamWriter.WriteLine("CanDeleted=" + Convert.ToInt32(CanDeleted).ToString());
+                    }
+                }
+
+                using (var fileStream = new FileStream(path + "\\" + Name + "\\img.png", System.IO.FileMode.Create))
+                {
+                    if (Image != null)
+                    {
+                        Image.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                    else
+                    {
+                        Image = new System.Drawing.Bitmap(1, 1);
+                        Image.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                    }
+                }
+
+                using (var fileStream = new FileStream(path + "\\" + Name + "\\des.dat", System.IO.FileMode.Create))
+                {
+                    using (StreamWriter streamWriter = new StreamWriter(fileStream))
+                    {
+                        streamWriter.Write(Description);
+                    }
                 }
             }
-
-            using (var fileStream = new FileStream(path + "\\" + Name + "\\img.png", System.IO.FileMode.Create))
+            catch (Exception e)
             {
-                if (Image != null)
-                {
-                    Image.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
-                }
-                else
-                {
-                    Image = new System.Drawing.Bitmap(1, 1);
-                    Image.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
-                }
-            }
-
-            using (var fileStream = new FileStream(path + "\\" + Name + "\\des.dat", System.IO.FileMode.Create))
-            {
-                using (StreamWriter streamWriter = new StreamWriter(fileStream))
-                {
-                    streamWriter.Write(Description);
-                }
+                System.Windows.Forms.MessageBox.Show("An error occurred while exporting the item.\n" +
+                    e.Message + "\nTry exporting the item again.", "Export error",
+                    System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
             }
 
         }
