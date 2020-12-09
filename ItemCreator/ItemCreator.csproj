@@ -60,6 +60,7 @@
     <Compile Include="IItem.cs" />
     <Compile Include="IItemCreationDialog.cs" />
     <Compile Include="Program.cs" />
+    <Compile Include="ProItem.cs" />
     <Compile Include="Project.cs" />
     <Compile Include="ProjectControlPanel.cs">
       <SubType>Component</SubType>
