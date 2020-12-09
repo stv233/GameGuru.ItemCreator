@@ -153,36 +153,44 @@ namespace ItemCreator
         /// <param name="path">Path</param>
         public void Import(string path)
         {
-            Name = path.Substring(path.LastIndexOf('\\') + 1);
-            string[] fileString = File.ReadAllLines(path + "\\init.dat");
-            foreach (string line in fileString)
+            try
             {
-                if (line.Contains("CanUsed"))
+                Name = path.Substring(path.LastIndexOf('\\') + 1);
+                string[] fileString = File.ReadAllLines(path + "\\init.dat");
+                foreach (string line in fileString)
                 {
-                    CanUsed = Convert.ToUInt16(line.Substring(line.IndexOf('=') + 1));
-                }
-                else if (line.Contains("ItemEffect"))
-                {
-                    Effect = Convert.ToInt32(line.Substring(line.IndexOf('=') + 1));
-                }
-                else if (line.Contains("EffectCount"))
-                {
-                    EffectCount = Convert.ToInt32(line.Substring(line.IndexOf('=') + 1));
-                }
-                else if (line.Contains("Image"))
-                {
-                    using (var fileStream = new FileStream(path + "\\" + line.Substring(line.IndexOf('=') + 1), FileMode.Open))
+                    if (line.Contains("CanUsed"))
                     {
-                        Image = System.Drawing.Image.FromStream(fileStream);
+                        CanUsed = Convert.ToUInt16(line.Substring(line.IndexOf('=') + 1));
+                    }
+                    else if (line.Contains("ItemEffect"))
+                    {
+                        Effect = Convert.ToInt32(line.Substring(line.IndexOf('=') + 1));
+                    }
+                    else if (line.Contains("EffectCount"))
+                    {
+                        EffectCount = Convert.ToInt32(line.Substring(line.IndexOf('=') + 1));
+                    }
+                    else if (line.Contains("Image"))
+                    {
+                        using (var fileStream = new FileStream(path + "\\" + line.Substring(line.IndexOf('=') + 1), FileMode.Open))
+                        {
+                            Image = System.Drawing.Image.FromStream(fileStream);
+                        }
+                    }
+                    else if (line.Contains("CanDeleted"))
+                    {
+                        CanDeleted = !(line.Substring(line.IndexOf('=') + 1) == "0");
                     }
                 }
-                else if (line.Contains("CanDeleted"))
-                {
-                    CanDeleted = !(line.Substring(line.IndexOf('=') + 1) == "0");
-                }
+                Description = File.ReadAllText(path + "\\" + "des.dat");
             }
-            Description = File.ReadAllText(path + "\\" + "des.dat"  );
-
+            catch (Exception e)
+            {
+                System.Windows.Forms.MessageBox.Show("An error occurred while importing an item.\n" +
+                    e.Message + "\nCheck the format you are importing to see if you are using the wrong type of project.", "Export error",
+                    System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+            }
         }
 
         /// <summary>
