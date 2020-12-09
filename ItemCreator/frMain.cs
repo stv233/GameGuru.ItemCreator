@@ -458,10 +458,6 @@ namespace ItemCreator
                         saveToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
-
-                        var setting = new Properties.Settings();
-                        setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
-                        setting.Save();
                     };
                     lbName.Click += (s, e) =>
                     {
@@ -472,10 +468,6 @@ namespace ItemCreator
                         saveToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
-
-                        var setting = new Properties.Settings();
-                        setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
-                        setting.Save();
                     };
                     lbPath.Click += (s, e) =>
                     {
@@ -486,10 +478,6 @@ namespace ItemCreator
                         saveToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
-
-                        var setting = new Properties.Settings();
-                        setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
-                        setting.Save();
                     };
 
                     i++;
