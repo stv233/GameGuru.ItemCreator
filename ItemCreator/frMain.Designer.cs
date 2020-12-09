@@ -31,12 +31,12 @@
             this.msMain = new System.Windows.Forms.MenuStrip();
             this.projectToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.simpleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aIsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +75,33 @@
             this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
+            // simpleToolStripMenuItem
+            // 
+            this.simpleToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.simpleToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
+            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.simpleToolStripMenuItem.Text = "Simple inventory system project...";
+            this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
+            // 
+            // proToolStripMenuItem
+            // 
+            this.proToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.proToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.proToolStripMenuItem.Name = "proToolStripMenuItem";
+            this.proToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.proToolStripMenuItem.Text = "Inventory system PRO project...";
+            this.proToolStripMenuItem.Click += new System.EventHandler(this.proToolStripMenuItem_Click);
+            // 
+            // aIsToolStripMenuItem
+            // 
+            this.aIsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.aIsToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.aIsToolStripMenuItem.Name = "aIsToolStripMenuItem";
+            this.aIsToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.aIsToolStripMenuItem.Text = "Advanced inventory system project...";
+            this.aIsToolStripMenuItem.Click += new System.EventHandler(this.aIsToolStripMenuItem_Click);
+            // 
             // openToolStripMenuItem
             // 
             this.openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -104,32 +131,11 @@
             this.saveAsToolStripMenuItem.Text = "Save as...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
-            // simpleToolStripMenuItem
-            // 
-            this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
-            this.simpleToolStripMenuItem.Size = new System.Drawing.Size(252, 22);
-            this.simpleToolStripMenuItem.Text = "Simple inventory system project...";
-            this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
-            // 
-            // proToolStripMenuItem
-            // 
-            this.proToolStripMenuItem.Name = "proToolStripMenuItem";
-            this.proToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.proToolStripMenuItem.Text = "Inventory system PRO project...";
-            this.proToolStripMenuItem.Click += new System.EventHandler(this.proToolStripMenuItem_Click);
-            // 
-            // aIsToolStripMenuItem
-            // 
-            this.aIsToolStripMenuItem.Name = "aIsToolStripMenuItem";
-            this.aIsToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.aIsToolStripMenuItem.Text = "Advanced inventory system project...";
-            this.aIsToolStripMenuItem.Click += new System.EventHandler(this.aIsToolStripMenuItem_Click);
-            // 
             // frMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            //this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.msMain);
             this.MainMenuStrip = this.msMain;
             this.Name = "frMain";
