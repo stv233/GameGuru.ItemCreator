@@ -128,7 +128,7 @@ namespace ItemCreator
                 }
             }
 
-            using (var fileStream = new FileStream(path + "\\" + Name + "\\des.txt", System.IO.FileMode.Create))
+            using (var fileStream = new FileStream(path + "\\" + Name + "\\des.dat", System.IO.FileMode.Create))
             {
                 using (StreamWriter streamWriter = new StreamWriter(fileStream))
                 {
@@ -172,7 +172,7 @@ namespace ItemCreator
                     CanDeleted = !(line.Substring(line.IndexOf('=') + 1) == "0");
                 }
             }
-            Description = File.ReadAllText(path + "\\" + "des.txt");
+            Description = File.ReadAllText(path + "\\" + "des.dat"  );
 
         }
 

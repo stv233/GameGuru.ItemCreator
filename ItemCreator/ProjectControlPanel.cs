@@ -98,6 +98,35 @@ namespace ItemCreator
                     }
 
                 }
+                else if (Project.Type == Project.Types.Simple)
+                {
+                    SimpleItem item = new SimpleItem("My new item");
+                    SimpleItemCreationDialog creationDialog = new SimpleItemCreationDialog(item);
+
+
+
+                    while (true)
+                    {
+                        DialogResult result = creationDialog.ShowDialog();
+                        if (result == DialogResult.OK)
+                        {
+                            if (!Project.ListOfItems.ContainsKey(creationDialog.Item.Name))
+                            {
+                                Project.AddItem(creationDialog.Item);
+                                break;
+                            }
+                            else
+                            {
+                                MessageBox.Show("An item with the given name already exists.",
+                                    "Item creation", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            }
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                }
 
                 ReloadItems();
                 ProjectChanged = true;
@@ -125,9 +154,15 @@ namespace ItemCreator
                     {
                          item = new AISItem("My new item");
                     }
+                    else if (Project.Type == Project.Types.Simple)
+                    {
+                         item = new SimpleItem("My new item");
+                    }
                     else
                     {
-                         item = new AISItem("My new item");
+                        MessageBox.Show("This project does not have any of the supported types.",
+                            "Import error!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
                     }
 
                     using (var fbs = new FolderBrowserDialog())
@@ -289,6 +324,20 @@ namespace ItemCreator
                     if (Project.Type == Project.Types.AIS)
                     {
                         var dialog = new AISItemCreationDialog((AISItem)item);
+                        dialog.CanChangeName = false;
+
+
+                        if (dialog.ShowDialog() == DialogResult.OK)
+                        {
+                            Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            ProjectChanged = true;
+                            ReloadItems();
+                            return;
+                        }
+                    }
+                    else if (Project.Type == Project.Types.Simple)
+                    {
+                        var dialog = new SimpleItemCreationDialog((SimpleItem)item);
                         dialog.CanChangeName = false;
 
 

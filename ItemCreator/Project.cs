@@ -144,6 +144,12 @@ namespace ItemCreator
                     item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
                     ListOfItems.Add(itemName, item);
                 }
+                else if (Type == Types.Simple)
+                {
+                    SimpleItem item = new SimpleItem(itemName);
+                    item.Import(appData + "\\Projects\\" + Name + "\\" + itemName);
+                    ListOfItems.Add(itemName, item);
+                }
             }
         }
 

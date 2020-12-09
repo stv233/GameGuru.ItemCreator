@@ -66,6 +66,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SimpleItem.cs" />
+    <Compile Include="SimpleItemCreationDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <EmbeddedResource Include="frMain.resx">
       <DependentUpon>frMain.cs</DependentUpon>
     </EmbeddedResource>
