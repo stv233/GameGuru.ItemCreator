@@ -21,13 +21,19 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_85F043EE57E9FC4BCB45F58EC98182A1"
-        "OwnerKey" = "8:_D02BFE74E378457CB3F446793AAE3376"
+        "MsmKey" = "8:_265913E36E3945AAAB4E234FF29332C8"
+        "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_D02BFE74E378457CB3F446793AAE3376"
+        "MsmKey" = "8:_85F043EE57E9FC4BCB45F58EC98182A1"
+        "OwnerKey" = "8:_265913E36E3945AAAB4E234FF29332C8"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_BF4E4A31C07D45C7850F7D1029AB28B2"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -40,7 +46,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_D02BFE74E378457CB3F446793AAE3376"
+        "OwnerKey" = "8:_BF4E4A31C07D45C7850F7D1029AB28B2"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_265913E36E3945AAAB4E234FF29332C8"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -175,6 +187,37 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_265913E36E3945AAAB4E234FF29332C8"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:ItemCreator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_265913E36E3945AAAB4E234FF29332C8"
+                    {
+                    "Name" = "8:ItemCreator.exe"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:..\\ItemCreator\\bin\\Release\\ItemCreator.exe"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_0A68255FEA1243F2BE03E7FE66A87DDB"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_85F043EE57E9FC4BCB45F58EC98182A1"
             {
             "AssemblyRegister" = "3:1"
@@ -204,37 +247,6 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_D02BFE74E378457CB3F446793AAE3376"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ItemCreator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_D02BFE74E378457CB3F446793AAE3376"
-                    {
-                    "Name" = "8:ItemCreator.exe"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:..\\ItemCreator\\bin\\Debug\\ItemCreator.exe"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_0A68255FEA1243F2BE03E7FE66A87DDB"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
         }
@@ -293,15 +305,15 @@
         {
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Item Creator"
-        "ProductCode" = "8:{5C8BFA9E-09A3-495E-95DA-E2530153DFCE}"
-        "PackageCode" = "8:{6BDEF8BD-4AD9-46A3-8A66-AD58D29DDD1D}"
+        "ProductCode" = "8:{B10329CE-392D-48E8-8F1E-1A9D32AF6FC7}"
+        "PackageCode" = "8:{5639F793-0D81-4156-AF88-9EF179A70997}"
         "UpgradeCode" = "8:{1A72CA5D-4A61-48EC-8587-66553EC2CE43}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:0.0.2"
+        "ProductVersion" = "8:1.0.0"
         "Manufacturer" = "8:stv233"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://stv233.pro/en/me/"
@@ -414,30 +426,30 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_253E3C2319C7483589CE5F1514BC9EA5"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_16D5F7F056204886B2BBC6F71FBCE3A6"
             {
-            "Name" = "8:Shortcut to ItemCreator.exe"
+            "Name" = "8:Item Creator"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D02BFE74E378457CB3F446793AAE3376"
-            "Folder" = "8:_68573060FF0746029EB5401A07B3E5FD"
+            "Target" = "8:_265913E36E3945AAAB4E234FF29332C8"
+            "Folder" = "8:_E1F2414C2E134065AC95329269AD6879"
             "WorkingFolder" = "8:_0A68255FEA1243F2BE03E7FE66A87DDB"
             "Icon" = "8:"
             "Feature" = "8:"
             }
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_EF35628B2E9D4CC48C0DCC821340B0C5"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_F7590BCCEFA640CFBA786C80DC40D20E"
             {
-            "Name" = "8:Shortcut to ItemCreator.exe"
+            "Name" = "8:Item Creator"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
             "IconIndex" = "3:0"
             "Transitive" = "11:FALSE"
-            "Target" = "8:_D02BFE74E378457CB3F446793AAE3376"
-            "Folder" = "8:_E1F2414C2E134065AC95329269AD6879"
+            "Target" = "8:_265913E36E3945AAAB4E234FF29332C8"
+            "Folder" = "8:_68573060FF0746029EB5401A07B3E5FD"
             "WorkingFolder" = "8:_0A68255FEA1243F2BE03E7FE66A87DDB"
             "Icon" = "8:"
             "Feature" = "8:"
@@ -838,6 +850,73 @@
         }
         "MergeModule"
         {
+            "{CEE29DC0-9FBA-4B99-8D47-5BC643D9B626}:_BF4E4A31C07D45C7850F7D1029AB28B2"
+            {
+            "UseDynamicProperties" = "11:TRUE"
+            "IsDependency" = "11:FALSE"
+            "SourcePath" = "8:..\\ItemCreatorMerge\\Release\\ItemCreatorMerge.msm"
+                "Properties"
+                {
+                    "_15E2575526282B71C8E3CDE63BBA707A.5BAF29E68CF742859B016477879767EE"
+                    {
+                    "Name" = "8:_15E2575526282B71C8E3CDE63BBA707A.5BAF29E68CF742859B016477879767EE"
+                    "DisplayName" = "8:"
+                    "Description" = "8:"
+                    "Type" = "3:2"
+                    "ContextData" = "8:InstallToGAC=;IsolateToManifest=_E7704F4E78535DDC490C6D19EECD8FEE.5BAF29E68CF742859B016477879767EE"
+                    "Attributes" = "3:0"
+                    "Setting" = "3:2"
+                    "Value" = "8:_E7704F4E78535DDC490C6D19EECD8FEE.5BAF29E68CF742859B016477879767EE"
+                    "DefaultValue" = "8:_E7704F4E78535DDC490C6D19EECD8FEE.5BAF29E68CF742859B016477879767EE"
+                    "ParentName" = "8:_B5BBD460B02045D283EE1183079DDEFF.5BAF29E68CF742859B016477879767EE"
+                    "UsePlugInResources" = "11:FALSE"
+                    }
+                    "_4FCDA64475F744DD3DC4F171D644AF00.5BAF29E68CF742859B016477879767EE"
+                    {
+                    "Name" = "8:_4FCDA64475F744DD3DC4F171D644AF00.5BAF29E68CF742859B016477879767EE"
+                    "DisplayName" = "8:"
+                    "Description" = "8:"
+                    "Type" = "3:2"
+                    "ContextData" = "8:InstallToGAC=;IsolateToManifest=_A9A741DA65CC4FF8AD035ECDB4B87036.5BAF29E68CF742859B016477879767EE"
+                    "Attributes" = "3:0"
+                    "Setting" = "3:2"
+                    "Value" = "8:_A9A741DA65CC4FF8AD035ECDB4B87036.5BAF29E68CF742859B016477879767EE"
+                    "DefaultValue" = "8:_A9A741DA65CC4FF8AD035ECDB4B87036.5BAF29E68CF742859B016477879767EE"
+                    "ParentName" = "8:_B5BBD460B02045D283EE1183079DDEFF.5BAF29E68CF742859B016477879767EE"
+                    "UsePlugInResources" = "11:FALSE"
+                    }
+                    "_7FB8743AEFB1505AB90597C6B278E573.5BAF29E68CF742859B016477879767EE"
+                    {
+                    "Name" = "8:_7FB8743AEFB1505AB90597C6B278E573.5BAF29E68CF742859B016477879767EE"
+                    "DisplayName" = "8:"
+                    "Description" = "8:"
+                    "Type" = "3:2"
+                    "ContextData" = "8:InstallToGAC=;IsolateToManifest=_274D0B5C8EF87E548314EBDF7B7D4DD0.5BAF29E68CF742859B016477879767EE"
+                    "Attributes" = "3:0"
+                    "Setting" = "3:2"
+                    "Value" = "8:_274D0B5C8EF87E548314EBDF7B7D4DD0.5BAF29E68CF742859B016477879767EE"
+                    "DefaultValue" = "8:_274D0B5C8EF87E548314EBDF7B7D4DD0.5BAF29E68CF742859B016477879767EE"
+                    "ParentName" = "8:_B5BBD460B02045D283EE1183079DDEFF.5BAF29E68CF742859B016477879767EE"
+                    "UsePlugInResources" = "11:FALSE"
+                    }
+                    "_B5BBD460B02045D283EE1183079DDEFF.5BAF29E68CF742859B016477879767EE"
+                    {
+                    "Name" = "8:_B5BBD460B02045D283EE1183079DDEFF.5BAF29E68CF742859B016477879767EE"
+                    "DisplayName" = "8:Module Retargetable Folder"
+                    "Description" = "8:"
+                    "Type" = "3:32769"
+                    "ContextData" = "8:_RetargetableFolder"
+                    "Attributes" = "3:6"
+                    "Setting" = "3:1"
+                    "UsePlugInResources" = "11:FALSE"
+                    }
+                }
+            "LanguageId" = "3:1049"
+            "Exclude" = "11:FALSE"
+            "Folder" = "8:"
+            "Feature" = "8:"
+            "IsolateTo" = "8:"
+            }
         }
         "ProjectOutput"
         {
