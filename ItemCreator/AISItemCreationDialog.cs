@@ -63,6 +63,7 @@ namespace ItemCreator
             this.BackColor = System.Drawing.Color.Black;
             this.Width = 800;
             this.StartPosition = FormStartPosition.CenterParent;
+            this.Icon = Properties.Resources.ico;
 
             lbName = new Label
             {

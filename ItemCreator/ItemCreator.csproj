@@ -49,6 +49,9 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>ico.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -125,6 +128,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Loading.jpg" />
+    <None Include="Resources\ico.ico" />
+    <Content Include="ico.ico" />
     <Content Include="Version.txt" />
   </ItemGroup>
   <ItemGroup>

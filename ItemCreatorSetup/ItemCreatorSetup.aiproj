@@ -11,7 +11,7 @@
     <WorkingDirectory>.</WorkingDirectory>
     <IsWindowsApplication>True</IsWindowsApplication>
     <AssemblyName>InventoryCreatorSetup</AssemblyName>
-    <Name>InventoryCreatorSetup</Name>
+    <Name>ItemCreatorSetup</Name>
     <RootNamespace>InventoryCreatorSetup</RootNamespace>
     <LoadFromTemplate>
     </LoadFromTemplate>

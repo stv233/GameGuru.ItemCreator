@@ -10,7 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		InventoryCreatorSetup\InventoryCreatorSetup-SetupFiles\InventoryCreatorSetup.msi = InventoryCreatorSetup\InventoryCreatorSetup-SetupFiles\InventoryCreatorSetup.msi
 	EndProjectSection
 EndProject
-Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "InventoryCreatorSetup", "InventoryCreatorSetup\InventoryCreatorSetup.aiproj", "{C37FA761-CDCE-4B9A-A29B-2F07553062C4}"
+Project("{840C416C-B8F3-42BC-B0DD-F6BB14C9F8CB}") = "ItemCreatorSetup", "InventoryCreatorSetup\ItemCreatorSetup.aiproj", "{C37FA761-CDCE-4B9A-A29B-2F07553062C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

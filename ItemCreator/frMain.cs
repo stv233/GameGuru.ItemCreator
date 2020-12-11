@@ -29,6 +29,7 @@ namespace ItemCreator
             this.ClientSize = new Size(settings.Width, settings.Height);
             this.MinimumSize = new Size(800, 600);
             this.Text = "Item Creator " + settings.Version;
+            this.Icon = Properties.Resources.ico;
 
             if (settings.LatestProjects == null)
             {

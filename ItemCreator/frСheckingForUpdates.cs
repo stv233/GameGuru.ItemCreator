@@ -14,6 +14,7 @@ namespace ItemCreator
 
         public frСheckingForUpdates()
         {
+            this.Icon = Properties.Resources.ico;
             this.InitializeComponent();
 
             Version version = null;
