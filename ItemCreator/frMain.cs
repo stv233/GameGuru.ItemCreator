@@ -22,7 +22,7 @@ namespace ItemCreator
         private Button btNewAISProject;
         private Button btOpenProject;
 
-        public frMain()
+        public frMain(string[] args)
         {
             var settings = new Properties.Settings();
             this.BackColor = Color.Black;
@@ -195,6 +195,22 @@ namespace ItemCreator
             };
 
             OnResize(new EventArgs());
+
+            if (args.Length > 0)
+            {
+                projectPath = args[0];
+                projectControlPanel.Project.Open(args[0]);
+                projectControlPanel.ReloadItems();
+                saveAsToolStripMenuItem.Enabled = true;
+                saveToolStripMenuItem.Enabled = true;
+                projectControlPanel.Visible = true;
+                projectControlPanel.BringToFront();
+
+                var setting = new Properties.Settings();
+                setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
+                setting.Save();
+                LoadLatestProjects();
+            }
         }
 
         private void simpleToolStripMenuItem_Click(object sender, EventArgs e)

@@ -10,12 +10,13 @@
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.pdb" Value="ItemCreator.pdb"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
+    <ROW Property="ARPPRODUCTICON" Value="ico.exe" Type="8"/>
     <ROW Property="ARPURLINFOABOUT" Value="https://stv233.pro/en/me/"/>
-    <ROW Property="Manufacturer" Value="stv233"/>
-    <ROW Property="ProductCode" Value="1033:{2BCC720D-ABE3-4EAC-940C-C6B2273E9C26} " Type="16"/>
+    <ROW Property="Manufacturer" Value="Stv233.Pro"/>
+    <ROW Property="ProductCode" Value="1033:{1B22D71C-A5E5-4D29-B114-8422160EEE3D} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Item Creator"/>
-    <ROW Property="ProductVersion" Value="0.2.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.3.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{C2E9136B-711C-4B5D-AA33-8AA6FC64ED33}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -131,6 +132,9 @@
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
     <ROW Feature_="MainFeature" Component_="ItemCreator_SymbolsOutput"/>
   </COMPONENT>
+  <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
+    <ROW Name="ico.exe" SourcePath="..\ItemCreator\ico.ico" Index="0"/>
+  </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiInstExSeqComponent">
     <ROW Action="AI_DOWNGRADE" Condition="AI_NEWERPRODUCTFOUND AND (UILevel &lt;&gt; 5)" Sequence="210"/>
     <ROW Action="AI_RESTORE_LOCATION" Condition="APPDIR=&quot;&quot;" Sequence="749"/>
@@ -156,8 +160,8 @@
     <ROW Registry="Version" Root="-1" Key="Software\[Manufacturer]\[ProductName]" Name="Version" Value="[ProductVersion]" Component_="ProductInformation"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiShortsComponent">
-    <ROW Shortcut="AI_PROPPATH_FILENAME_PERBUILD_ItemC" Directory_="DesktopFolder" Name="ITEMCR~1.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe]" Component_="ItemCreator_PrimaryOutput" Target="[#ItemCreator.exe]" Hotkey="0" IconIndex="0" ShowCmd="1" WkDir="ItemCreator_Dir"/>
-    <ROW Shortcut="ItemCreator" Directory_="SHORTCUTDIR" Name="ITEMCR~1|ItemCreator" Component_="ItemCreator_PrimaryOutput" Target="[#ItemCreator.exe]" Hotkey="0" IconIndex="0" ShowCmd="1"/>
+    <ROW Shortcut="AI_PROPPATH_FILENAME_PERBUILD_ItemC" Directory_="DesktopFolder" Name="ITEMCR~1.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe]" Component_="ItemCreator_PrimaryOutput" Target="[#ItemCreator.exe]" Hotkey="0" Icon_="ico.exe" IconIndex="0" ShowCmd="1" WkDir="ItemCreator_Dir"/>
+    <ROW Shortcut="ItemCreator" Directory_="SHORTCUTDIR" Name="ITEMCR~2|Item Creator" Component_="ItemCreator_PrimaryOutput" Target="[#ItemCreator.exe]" Hotkey="0" Icon_="ico.exe" IconIndex="0" ShowCmd="1"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiThemeComponent">
     <ATTRIBUTE name="UsedTheme" value="classic"/>
