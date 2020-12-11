@@ -96,7 +96,7 @@ namespace Updater
             {
                 return;
             }
-            string fileName = Path.GetTempPath() + "updater_example_setup.exe";
+            string fileName = Path.GetTempPath() + "ItemCreatorSetup.msi";
             this._isDownloaded = false;
             try
             {
@@ -106,13 +106,13 @@ namespace Updater
             {
                 return;
             }
-            Process[] waControllers = Process.GetProcessesByName("Program");
+            Process[] waControllers = Process.GetProcessesByName("ItemCreator");
             Array.ForEach(waControllers, p => p.CloseMainWindow());
             while (!this._isDownloaded)
             {
                 await Task.Delay(100);
             }
-            Process.Start(fileName, "/VERYSILENT");
+            Process.Start(fileName, "/quiet");
         }
     }
 }

@@ -9,28 +9,26 @@ namespace ItemCreator
 {
     class frСheckingForUpdates : Form
     {
-        private Version version = new Version(new Properties.Settings().Version);
 
         private readonly Updater.Updater updater;
 
-        public frСheckingForUpdates(string[] args)
+        public frСheckingForUpdates()
         {
             this.InitializeComponent();
-            if (args.Length == 2)
+
+            Version version = null;
+            string fileLink = string.Empty;
+            try
             {
-                Version version = null;
-                string fileLink = string.Empty;
-                try
-                {
-                    version = new Version(args[0]);
-                    fileLink = args[1];
-                }
-                catch (Exception)
-                {
-                    Application.Exit();
-                }
-                this.updater = new Updater.Updater(version, fileLink);
+                version = new Version(new Properties.Settings().Version);
+                fileLink = "https://github.com/stv233/ItemCreator/blob/master/ItemCreator/Version.txt?raw=true";
             }
+            catch (Exception e)
+            {
+                Application.Exit();
+            }
+            this.updater = new Updater.Updater(version, fileLink);
+
         }
 
         private async Task CheckForUpdates()
@@ -41,7 +39,7 @@ namespace ItemCreator
             }
             finally
             {
-                Application.Exit();
+                this.Close();
             }
         }
 
@@ -56,8 +54,12 @@ namespace ItemCreator
             // 
             // frСheckingForUpdates
             // 
-            this.ClientSize = new System.Drawing.Size(426, 331);
+            this.BackgroundImage = global::ItemCreator.Properties.Resources.Loading;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(379, 222);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "frСheckingForUpdates";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.frChekingForUpdates_Load);
             this.ResumeLayout(false);
 

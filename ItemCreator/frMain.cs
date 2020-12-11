@@ -28,6 +28,7 @@ namespace ItemCreator
             this.BackColor = Color.Black;
             this.ClientSize = new Size(settings.Width, settings.Height);
             this.MinimumSize = new Size(800, 600);
+            this.Text = "Item Creator " + settings.Version;
 
             if (settings.LatestProjects == null)
             {
