@@ -112,7 +112,7 @@ namespace Updater
             {
                 await Task.Delay(100);
             }
-            Process.Start(fileName, "/update /quiet");
+            Process.Start(fileName, "/quiet");
         }
     }
 }
