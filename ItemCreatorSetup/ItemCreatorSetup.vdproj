@@ -191,7 +191,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ItemCreator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ItemCreator, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_265913E36E3945AAAB4E234FF29332C8"
@@ -306,14 +306,14 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Item Creator"
         "ProductCode" = "8:{B10329CE-392D-48E8-8F1E-1A9D32AF6FC7}"
-        "PackageCode" = "8:{5639F793-0D81-4156-AF88-9EF179A70997}"
+        "PackageCode" = "8:{AED62497-14A2-463F-AB19-C1C8BC3DECD2}"
         "UpgradeCode" = "8:{1A72CA5D-4A61-48EC-8587-66553EC2CE43}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
         "RemovePreviousVersions" = "11:FALSE"
         "DetectNewerInstalledVersion" = "11:TRUE"
         "InstallAllUsers" = "11:FALSE"
-        "ProductVersion" = "8:1.0.0"
+        "ProductVersion" = "8:1.0.5"
         "Manufacturer" = "8:stv233"
         "ARPHELPTELEPHONE" = "8:"
         "ARPHELPLINK" = "8:https://stv233.pro/en/me/"
@@ -871,17 +871,17 @@
                     "ParentName" = "8:_B5BBD460B02045D283EE1183079DDEFF.5BAF29E68CF742859B016477879767EE"
                     "UsePlugInResources" = "11:FALSE"
                     }
-                    "_4FCDA64475F744DD3DC4F171D644AF00.5BAF29E68CF742859B016477879767EE"
+                    "_3D7C34B24AB20492163F0AE98B3FB073.5BAF29E68CF742859B016477879767EE"
                     {
-                    "Name" = "8:_4FCDA64475F744DD3DC4F171D644AF00.5BAF29E68CF742859B016477879767EE"
+                    "Name" = "8:_3D7C34B24AB20492163F0AE98B3FB073.5BAF29E68CF742859B016477879767EE"
                     "DisplayName" = "8:"
                     "Description" = "8:"
                     "Type" = "3:2"
-                    "ContextData" = "8:InstallToGAC=;IsolateToManifest=_A9A741DA65CC4FF8AD035ECDB4B87036.5BAF29E68CF742859B016477879767EE"
+                    "ContextData" = "8:InstallToGAC=;IsolateToManifest=_A88171384A564AD0B8C0962E9E74E197.5BAF29E68CF742859B016477879767EE"
                     "Attributes" = "3:0"
                     "Setting" = "3:2"
-                    "Value" = "8:_A9A741DA65CC4FF8AD035ECDB4B87036.5BAF29E68CF742859B016477879767EE"
-                    "DefaultValue" = "8:_A9A741DA65CC4FF8AD035ECDB4B87036.5BAF29E68CF742859B016477879767EE"
+                    "Value" = "8:_A88171384A564AD0B8C0962E9E74E197.5BAF29E68CF742859B016477879767EE"
+                    "DefaultValue" = "8:_A88171384A564AD0B8C0962E9E74E197.5BAF29E68CF742859B016477879767EE"
                     "ParentName" = "8:_B5BBD460B02045D283EE1183079DDEFF.5BAF29E68CF742859B016477879767EE"
                     "UsePlugInResources" = "11:FALSE"
                     }
@@ -911,7 +911,7 @@
                     "UsePlugInResources" = "11:FALSE"
                     }
                 }
-            "LanguageId" = "3:1049"
+            "LanguageId" = "3:1033"
             "Exclude" = "11:FALSE"
             "Folder" = "8:"
             "Feature" = "8:"
