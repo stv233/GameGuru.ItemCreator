@@ -21,20 +21,14 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_A9A741DA65CC4FF8AD035ECDB4B87036"
+        "MsmKey" = "8:_A88171384A564AD0B8C0962E9E74E197"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_E7704F4E78535DDC490C6D19EECD8FEE"
-        "OwnerKey" = "8:_A9A741DA65CC4FF8AD035ECDB4B87036"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_E7704F4E78535DDC490C6D19EECD8FEE"
+        "OwnerKey" = "8:_A88171384A564AD0B8C0962E9E74E197"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -46,7 +40,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A9A741DA65CC4FF8AD035ECDB4B87036"
+        "OwnerKey" = "8:_A88171384A564AD0B8C0962E9E74E197"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_E7704F4E78535DDC490C6D19EECD8FEE"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -129,14 +129,14 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A9A741DA65CC4FF8AD035ECDB4B87036"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_A88171384A564AD0B8C0962E9E74E197"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:ItemCreator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_A9A741DA65CC4FF8AD035ECDB4B87036"
+                    "_A88171384A564AD0B8C0962E9E74E197"
                     {
                     "Name" = "8:ItemCreator.exe"
                     "Attributes" = "3:512"
