@@ -133,7 +133,7 @@
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ItemCreator, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ItemCreator, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
                     "_A88171384A564AD0B8C0962E9E74E197"
@@ -221,7 +221,7 @@
         "Module"
         {
         "ModuleSignature" = "8:MergeModule.5BAF29E68CF742859B016477879767EE"
-        "Version" = "8:1.0.0.2"
+        "Version" = "8:1.0.0.5"
         "Title" = "8:Item Creator"
         "Subject" = "8:"
         "Author" = "8:stv233"
