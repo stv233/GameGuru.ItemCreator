@@ -39,7 +39,14 @@ namespace ItemCreator
             }
             finally
             {
-                this.Close();
+                if (updater.Update)
+                {
+                    Application.Exit();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
         }
 

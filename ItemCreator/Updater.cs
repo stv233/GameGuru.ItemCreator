@@ -14,6 +14,7 @@ namespace Updater
         private readonly string _fileLink;
         private readonly WebClient _webClient;
         private bool _isDownloaded;
+        public bool Update { get; private set; }
 
         public int CurrentUpdProgress { get; private set; }
 
@@ -82,7 +83,15 @@ namespace Updater
             string[] dataArr = fileContent.Split('|');
             var fileVersion = new Version(dataArr[0]);
             string releaseLink = dataArr[1];
-            return this._currentVersion >= fileVersion ? "" : releaseLink;
+            if (this._currentVersion >= fileVersion)
+            {
+                return "";
+            }
+            else
+            {
+                Update = true;
+                return releaseLink;
+            }
         }
 
         /// <summary>
@@ -106,7 +115,7 @@ namespace Updater
             {
                 return;
             }
-            Process[] waControllers = Process.GetProcessesByName("ItemCreator");
+            Process[] waControllers = Process.GetProcessesByName("ItemCreator.exe");
             Array.ForEach(waControllers, p => p.CloseMainWindow());
             while (!this._isDownloaded)
             {

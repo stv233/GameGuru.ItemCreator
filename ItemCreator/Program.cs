@@ -17,7 +17,7 @@ namespace ItemCreator
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //new frСheckingForUpdates().ShowDialog();
-            Application.Run(new frСheckingForUpdates());
+            new frСheckingForUpdates().ShowDialog();
             Application.Run(new frMain());
         }
     }
