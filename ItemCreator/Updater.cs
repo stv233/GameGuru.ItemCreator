@@ -89,8 +89,16 @@ namespace Updater
             }
             else
             {
-                Update = true;
-                return releaseLink;
+                if (System.Windows.Forms.MessageBox.Show("New update found. Would you like to update the program now?",
+                        "Update detected", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
+                {
+                    Update = true;
+                    return releaseLink;
+                }
+                else
+                {
+                    return "";
+                }
             }
         }
 
