@@ -1,1 +1,1 @@
-﻿0.3.0|https://github.com/stv233/ItemCreator/blob/master/InventoryCreatorSetup/InventoryCreatorSetup-SetupFiles/InventoryCreatorSetup.msi?raw=true
+﻿0.3.0|https://github.com/stv233/ItemCreator/blob/master/ItemCreatorSetup/InventoryCreatorSetup-SetupFiles/InventoryCreatorSetup.msi?raw=true
