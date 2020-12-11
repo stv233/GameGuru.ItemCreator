@@ -5,6 +5,13 @@ VisualStudioVersion = 16.0.29324.140
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemCreator", "ItemCreator\ItemCreator.csproj", "{0040B9C8-B837-44C7-8D34-A2C6E74C990D}"
 EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ItemCreatorSetup", "ItemCreatorSetup\ItemCreatorSetup.vdproj", "{CD5309FE-7700-45E7-BD62-2C28917E30B1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{064AE3DB-3F68-46A4-9B5F-7143E0EADCBF}"
+	ProjectSection(SolutionItems) = preProject
+		ItemCreatorSetup\Release\ItemCreatorSetup.msi = ItemCreatorSetup\Release\ItemCreatorSetup.msi
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +22,8 @@ Global
 		{0040B9C8-B837-44C7-8D34-A2C6E74C990D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0040B9C8-B837-44C7-8D34-A2C6E74C990D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0040B9C8-B837-44C7-8D34-A2C6E74C990D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD5309FE-7700-45E7-BD62-2C28917E30B1}.Debug|Any CPU.ActiveCfg = Debug
+		{CD5309FE-7700-45E7-BD62-2C28917E30B1}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
