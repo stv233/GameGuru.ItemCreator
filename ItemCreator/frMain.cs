@@ -38,13 +38,15 @@ namespace ItemCreator
             settings.Save();
 
             InitializeComponent();
-            projectControlPanel.ProjectChanged = false;
+            projectControlPanel.Changed = false;
             projectControlPanel.Parent = this;
             projectControlPanel.Visible = false;
             projectControlPanel.Left = 0;
             projectControlPanel.Top = msMain.Height;
             projectControlPanel.Width = this.ClientSize.Width;
             projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
+            projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
+            projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
 
             btNewProProject = new Button
             {
@@ -183,7 +185,7 @@ namespace ItemCreator
             };
             this.FormClosing += (s, e) =>
             {
-                if (projectControlPanel.ProjectChanged == true)
+                if (projectControlPanel.Changed == true)
                 {
                     if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
                         "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
@@ -216,7 +218,7 @@ namespace ItemCreator
 
         private void simpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (projectControlPanel.ProjectChanged == true)
+            if (projectControlPanel.Changed == true)
             {
                 if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
                     "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
@@ -234,6 +236,9 @@ namespace ItemCreator
             projectControlPanel.Width = this.ClientSize.Width;
             projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
             projectControlPanel.Project.Type = Project.Types.Simple;
+            projectControlPanel.Changed = false;
+            projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
+            projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
 
             using (var sfd = new SaveFileDialog
             {
@@ -250,17 +255,24 @@ namespace ItemCreator
                     projectControlPanel.Visible = true;
                     projectControlPanel.BringToFront();
 
-                    var setting = new Properties.Settings();
-                    setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
-                    setting.Save();
+                    var settings = new Properties.Settings();
+                    settings.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
+                    settings.Save();
+                    this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
+                    projectControlPanel.Changed = true;
                     LoadLatestProjects();
+                }
+                else
+                {
+                    var settings = new Properties.Settings();
+                    this.Text = "Item Creator " + settings.Version;
                 }
             }
         }
 
         private void proToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (projectControlPanel.ProjectChanged == true)
+            if (projectControlPanel.Changed == true)
             {
                 if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
                     "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
@@ -278,6 +290,9 @@ namespace ItemCreator
             projectControlPanel.Width = this.ClientSize.Width;
             projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
             projectControlPanel.Project.Type = Project.Types.Pro;
+            projectControlPanel.Changed = false;
+            projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
+            projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
 
             using (var sfd = new SaveFileDialog
             {
@@ -294,17 +309,24 @@ namespace ItemCreator
                     projectControlPanel.Visible = true;
                     projectControlPanel.BringToFront();
 
-                    var setting = new Properties.Settings();
-                    setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
-                    setting.Save();
+                    var settings = new Properties.Settings();
+                    settings.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
+                    settings.Save();
+                    this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
+                    projectControlPanel.Changed = true;
                     LoadLatestProjects();
+                }
+                else
+                {
+                    var settings = new Properties.Settings();
+                    this.Text = "Item Creator " + settings.Version;
                 }
             }
         }
 
         private void aIsToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (projectControlPanel.ProjectChanged == true)
+            if (projectControlPanel.Changed == true)
             {
                 if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
                     "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
@@ -322,6 +344,9 @@ namespace ItemCreator
             projectControlPanel.Width = this.ClientSize.Width;
             projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
             projectControlPanel.Project.Type = Project.Types.AIS;
+            projectControlPanel.Changed = false;
+            projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
+            projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
 
             using (var sfd = new SaveFileDialog
             {
@@ -338,17 +363,24 @@ namespace ItemCreator
                     projectControlPanel.Visible = true;
                     projectControlPanel.BringToFront();
 
-                    var setting = new Properties.Settings();
-                    setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
-                    setting.Save();
+                    var settings = new Properties.Settings();
+                    settings.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
+                    settings.Save();
+                    this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
+                    projectControlPanel.Changed = true;
                     LoadLatestProjects();
+                }
+                else
+                {
+                    var settings = new Properties.Settings();
+                    this.Text = "Item Creator " + settings.Version;
                 }
             }
         }
 
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (projectControlPanel.ProjectChanged == true)
+            if (projectControlPanel.Changed == true)
             {
                 if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
                     "Open project?",MessageBoxButtons.YesNo,MessageBoxIcon.Warning) == DialogResult.No)
@@ -387,7 +419,7 @@ namespace ItemCreator
             if ((projectPath != "") && (projectPath != null))
             {
                 projectControlPanel.Project.Save(projectPath);
-                projectControlPanel.ProjectChanged = false;
+                projectControlPanel.Changed = false;
             }
             else
             {
@@ -410,7 +442,7 @@ namespace ItemCreator
                     saveAsToolStripMenuItem.Enabled = true;
                     saveToolStripMenuItem.Enabled = true;
                     projectControlPanel.Visible = true;
-                    projectControlPanel.ProjectChanged = false;
+                    projectControlPanel.Changed = false;
                     projectControlPanel.BringToFront();
 
                     var setting = new Properties.Settings();
@@ -514,5 +546,15 @@ namespace ItemCreator
             }
         }
 
-    }
+        private void projectControlPanel_ProjectCnanged(object sender,EventArgs e)
+        {
+                this.Text += "*";
+        }
+
+        private void projectControlPanel_ProjectSaved(object sendser, EventArgs e)
+        {
+            this.Text = this.Text.Replace("*", "");
+        }
+
+}
 }

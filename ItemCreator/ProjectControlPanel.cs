@@ -14,7 +14,33 @@ namespace ItemCreator
         /// </summary>
         public Project Project { get; protected set; }
 
-        public bool ProjectChanged { get; set; }
+        /// <summary>
+        /// Remembers if the project was changed after saving
+        /// </summary>
+        private bool _changed = false;
+
+        /// <summary>
+        /// Remembers if the project was changed after saving
+        /// </summary>
+        public bool Changed
+        {
+            get
+            {
+                return _changed;
+            }
+            set
+            {
+                if (value)
+                {
+                    ProjectCnanged?.Invoke(this, new EventArgs());
+                }
+                else
+                {
+                    ProjectSaved?.Invoke(this, new EventArgs());
+                }
+                _changed = value;
+            }
+        }
 
         /// <summary>
         /// Panel for displaying items.
@@ -36,11 +62,28 @@ namespace ItemCreator
         /// </summary>
         private Button btExportAllItems;
 
+        /// <summary>
+        /// Delegate for the event transmission.
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public delegate void MethodContainer(object sender, EventArgs e);
+
+        /// <summary>
+        /// Fires if the Changed property has been changed to true.
+        /// </summary>
+        public event MethodContainer ProjectCnanged;
+
+        /// <summary>
+        /// Fires if the Changed property has been changed to false.
+        /// </summary>
+        public event MethodContainer ProjectSaved;
+
         public ProjectControlPanel()
         {
             Project = new Project("New");
             this.BackColor = System.Drawing.Color.Black;
-            ProjectChanged = true;
+            Changed = true;
 
             pnItemPanel = new Panel
             {
@@ -158,7 +201,7 @@ namespace ItemCreator
                 }
 
                 ReloadItems();
-                ProjectChanged = true;
+                Changed = true;
             };
 
             btImportItem = new Button
@@ -227,7 +270,7 @@ namespace ItemCreator
                 }
 
                 ReloadItems();
-                ProjectChanged = true;
+                Changed = true;
             };
 
             btExportAllItems = new Button
@@ -335,7 +378,7 @@ namespace ItemCreator
                         "Delete item.", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
                         Project.ListOfItems.Remove(item.Name);
-                        ProjectChanged = true;
+                        Changed = true;
                         ReloadItems();
                         return;
                     }
@@ -363,7 +406,7 @@ namespace ItemCreator
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
                             Project.ListOfItems[dialog.Item.Name] = dialog.Item;
-                            ProjectChanged = true;
+                            Changed = true;
                             ReloadItems();
                             return;
                         }
@@ -378,7 +421,7 @@ namespace ItemCreator
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
                             Project.ListOfItems[dialog.Item.Name] = dialog.Item;
-                            ProjectChanged = true;
+                            Changed = true;
                             ReloadItems();
                             return;
                         }
@@ -392,7 +435,7 @@ namespace ItemCreator
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
                             Project.ListOfItems[dialog.Item.Name] = dialog.Item;
-                            ProjectChanged = true;
+                            Changed = true;
                             ReloadItems();
                             return;
                         }
