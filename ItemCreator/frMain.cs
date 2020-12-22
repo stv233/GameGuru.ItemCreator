@@ -188,7 +188,7 @@ namespace ItemCreator
                 if (projectControlPanel.Changed == true)
                 {
                     if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
-                        "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                        "Close project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                     {
                         e.Cancel = true;
                         return;
@@ -205,6 +205,7 @@ namespace ItemCreator
                 projectControlPanel.ReloadItems();
                 saveAsToolStripMenuItem.Enabled = true;
                 saveToolStripMenuItem.Enabled = true;
+                closeToolStripMenuItem.Enabled = true;
                 projectControlPanel.Visible = true;
                 projectControlPanel.BringToFront();
 
@@ -239,6 +240,9 @@ namespace ItemCreator
             projectControlPanel.Changed = false;
             projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
             projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
+            saveAsToolStripMenuItem.Enabled = false;
+            saveToolStripMenuItem.Enabled = false;
+            closeToolStripMenuItem.Enabled = false;
 
             using (var sfd = new SaveFileDialog
             {
@@ -252,6 +256,7 @@ namespace ItemCreator
                     projectControlPanel.Project.Open(sfd.FileName);
                     saveAsToolStripMenuItem.Enabled = true;
                     saveToolStripMenuItem.Enabled = true;
+                    closeToolStripMenuItem.Enabled = true;
                     projectControlPanel.Visible = true;
                     projectControlPanel.BringToFront();
 
@@ -293,6 +298,9 @@ namespace ItemCreator
             projectControlPanel.Changed = false;
             projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
             projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
+            saveAsToolStripMenuItem.Enabled = false;
+            saveToolStripMenuItem.Enabled = false;
+            closeToolStripMenuItem.Enabled = false;
 
             using (var sfd = new SaveFileDialog
             {
@@ -306,6 +314,7 @@ namespace ItemCreator
                     projectControlPanel.Project.Open(sfd.FileName);
                     saveAsToolStripMenuItem.Enabled = true;
                     saveToolStripMenuItem.Enabled = true;
+                    closeToolStripMenuItem.Enabled = true;
                     projectControlPanel.Visible = true;
                     projectControlPanel.BringToFront();
 
@@ -347,6 +356,9 @@ namespace ItemCreator
             projectControlPanel.Changed = false;
             projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
             projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
+            saveAsToolStripMenuItem.Enabled = false;
+            saveToolStripMenuItem.Enabled = false;
+            closeToolStripMenuItem.Enabled = false;
 
             using (var sfd = new SaveFileDialog
             {
@@ -360,6 +372,7 @@ namespace ItemCreator
                     projectControlPanel.Project.Open(sfd.FileName);
                     saveAsToolStripMenuItem.Enabled = true;
                     saveToolStripMenuItem.Enabled = true;
+                    closeToolStripMenuItem.Enabled = true;
                     projectControlPanel.Visible = true;
                     projectControlPanel.BringToFront();
 
@@ -400,6 +413,7 @@ namespace ItemCreator
                     projectControlPanel.ReloadItems();
                     saveAsToolStripMenuItem.Enabled = true;
                     saveToolStripMenuItem.Enabled = true;
+                    closeToolStripMenuItem.Enabled = true;
                     projectControlPanel.Visible = true;
                     projectControlPanel.BringToFront();
 
@@ -441,6 +455,7 @@ namespace ItemCreator
                     projectControlPanel.Project.Open(sfd.FileName);
                     saveAsToolStripMenuItem.Enabled = true;
                     saveToolStripMenuItem.Enabled = true;
+                    closeToolStripMenuItem.Enabled = true;
                     projectControlPanel.Visible = true;
                     projectControlPanel.Changed = false;
                     projectControlPanel.BringToFront();
@@ -510,6 +525,7 @@ namespace ItemCreator
                         projectControlPanel.ReloadItems();
                         saveAsToolStripMenuItem.Enabled = true;
                         saveToolStripMenuItem.Enabled = true;
+                        closeToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
                         this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
@@ -521,6 +537,7 @@ namespace ItemCreator
                         projectControlPanel.ReloadItems();
                         saveAsToolStripMenuItem.Enabled = true;
                         saveToolStripMenuItem.Enabled = true;
+                        closeToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
                         this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
@@ -532,6 +549,7 @@ namespace ItemCreator
                         projectControlPanel.ReloadItems();
                         saveAsToolStripMenuItem.Enabled = true;
                         saveToolStripMenuItem.Enabled = true;
+                        closeToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
                         this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
@@ -556,5 +574,34 @@ namespace ItemCreator
             this.Text = this.Text.Replace("*", "");
         }
 
-}
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (projectControlPanel.Changed == true)
+            {
+                if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
+                    "Close project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                {
+                    return;
+                }
+            }
+
+            projectControlPanel.Dispose();
+            projectControlPanel = new ProjectControlPanel();
+            projectControlPanel.Parent = this;
+            projectControlPanel.Visible = false;
+            projectControlPanel.Left = 0;
+            projectControlPanel.Top = msMain.Height;
+            projectControlPanel.Width = this.ClientSize.Width;
+            projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
+            projectControlPanel.Project.Type = Project.Types.AIS;
+            projectControlPanel.Changed = false;
+            projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
+            projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
+            saveAsToolStripMenuItem.Enabled = false;
+            saveToolStripMenuItem.Enabled = false;
+            closeToolStripMenuItem.Enabled = false;
+            var settings = new Properties.Settings();
+            this.Text = "Item Creator " + settings.Version;
+        }
+    }
 }
