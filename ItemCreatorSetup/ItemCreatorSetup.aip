@@ -13,10 +13,10 @@
     <ROW Property="ARPPRODUCTICON" Value="ico.exe" Type="8"/>
     <ROW Property="ARPURLINFOABOUT" Value="https://stv233.pro/en/me/"/>
     <ROW Property="Manufacturer" Value="Stv233.Pro"/>
-    <ROW Property="ProductCode" Value="1033:{26D8D33B-0210-4062-82DB-873783A03A9B} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{C26A7A92-03C6-4535-99F5-8511D711540E} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Item Creator"/>
-    <ROW Property="ProductVersion" Value="0.5.0" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.5.1" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{C2E9136B-711C-4B5D-AA33-8AA6FC64ED33}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
