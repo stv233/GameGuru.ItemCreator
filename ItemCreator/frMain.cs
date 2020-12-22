@@ -210,6 +210,7 @@ namespace ItemCreator
                 setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
                 setting.Save();
                 LoadLatestProjects();
+                this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
             }
         }
 
@@ -374,6 +375,9 @@ namespace ItemCreator
                     setting.LatestProjects.Add(projectControlPanel.Project.Name + "|" + projectPath);
                     setting.Save();
                     LoadLatestProjects();
+
+                    var settings = new Properties.Settings();
+                    this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
                 }
             }
         }
@@ -476,6 +480,7 @@ namespace ItemCreator
                         saveToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
+                        this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
                     };
                     lbName.Click += (s, e) =>
                     {
@@ -486,6 +491,7 @@ namespace ItemCreator
                         saveToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
+                        this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
                     };
                     lbPath.Click += (s, e) =>
                     {
@@ -496,6 +502,7 @@ namespace ItemCreator
                         saveToolStripMenuItem.Enabled = true;
                         projectControlPanel.Visible = true;
                         projectControlPanel.BringToFront();
+                        this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
                     };
 
                     i++;
