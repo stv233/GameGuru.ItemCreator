@@ -24,7 +24,7 @@ namespace ItemCreator
                 version = new Version(new Properties.Settings().Version);
                 fileLink = "https://github.com/stv233/ItemCreator/blob/master/ItemCreator/Version.txt?raw=true";
             }
-            catch (Exception e)
+            catch
             {
                 Application.Exit();
             }
