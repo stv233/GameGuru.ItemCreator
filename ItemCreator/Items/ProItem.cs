@@ -123,7 +123,8 @@ namespace ItemCreator
                 {
                     if (Icon != null)
                     {
-                        Icon.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                        var bitmap = new System.Drawing.Bitmap(Icon);
+                        bitmap.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
                     }
                     else
                     {

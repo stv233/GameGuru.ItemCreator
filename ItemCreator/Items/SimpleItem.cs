@@ -121,7 +121,8 @@ namespace ItemCreator
                 {
                     if (Image != null)
                     {
-                        Image.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
+                        var bitmap = new System.Drawing.Bitmap(Image);
+                        bitmap.Save(fileStream, System.Drawing.Imaging.ImageFormat.Png);
                     }
                     else
                     {
