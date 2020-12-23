@@ -585,18 +585,7 @@ namespace ItemCreator
                 }
             }
 
-            projectControlPanel.Dispose();
-            projectControlPanel = new ProjectControlPanel();
-            projectControlPanel.Parent = this;
             projectControlPanel.Visible = false;
-            projectControlPanel.Left = 0;
-            projectControlPanel.Top = msMain.Height;
-            projectControlPanel.Width = this.ClientSize.Width;
-            projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
-            projectControlPanel.Project.Type = Project.Types.AIS;
-            projectControlPanel.Changed = false;
-            projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
-            projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
             saveAsToolStripMenuItem.Enabled = false;
             saveToolStripMenuItem.Enabled = false;
             closeToolStripMenuItem.Enabled = false;
