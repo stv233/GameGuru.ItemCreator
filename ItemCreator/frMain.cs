@@ -243,7 +243,7 @@ namespace ItemCreator
 
         private async void frMain_Load(object sender,EventArgs e)
         {
-            string page = await downloadStringAsync("");
+            string page = await downloadStringAsync("https://github.com/stv233/ItemCreator/blob/master/ItemCreator/Page.txt?raw=true");
             if (!String.IsNullOrEmpty(page))
             {
                 wbBrowser.Load(page);
@@ -652,6 +652,11 @@ namespace ItemCreator
             addons.MusicDiscs = !addons.MusicDiscs;
             addons.Save();
             musicDiscsToolStripMenuItem.Checked = Addons.Enabled("MusicDiscs");
+        }
+
+        private void supportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("https://stv233.pro/en/me/");
         }
 
         private async Task<string> downloadStringAsync(string url)
