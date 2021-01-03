@@ -2,22 +2,186 @@
 <DOCUMENT Type="Advanced Installer" CreateVersion="17.7" version="17.7" Modules="simple" RootPath="." Language="en" Id="{ADA4E2F8-E9E0-4FE6-904A-9F281EAA28C1}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe" Value="..\ItemCreator\bin\Release"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe.config" Value="..\ItemCreator\bin\Release"/>
-    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.pdb" Value="..\ItemCreator\bin\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.exe" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.pdb" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.Core.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.Core.pdb" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.Core.xml" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.WinForms.XML" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.WinForms.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.WinForms.pdb" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.XML" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.pdb" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe" Value="..\ItemCreator\bin\x86\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe.config" Value="..\ItemCreator\bin\x86\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.pdb" Value="..\ItemCreator\bin\x86\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_README.txt" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_am.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ar.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_bg.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_bn.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ca.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_cef.pak" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_cef_100_percent.pak" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_cef_200_percent.pak" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_cef_extensions.pak" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_chrome_elf.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_cs.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_d3dcompiler_47.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_da.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_de.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_devtools_resources.pak" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_el.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_enGB.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_enUS.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_es.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_es419.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_et.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_fa.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_fi.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_fil.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_fr.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_gu.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_he.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_hi.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_hr.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_hu.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_icudtl.dat" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_id.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_it.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ja.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_kn.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ko.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_libEGL.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_libEGL.dll_1" Value="..\ItemCreator\bin\x86\Release\.\swiftshader"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_libGLESv2.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_libGLESv2.dll_1" Value="..\ItemCreator\bin\x86\Release\.\swiftshader"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_libcef.dll" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_lt.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_lv.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ml.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_mr.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ms.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_nb.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_nl.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_pl.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ptBR.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ptPT.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ro.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ru.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_sk.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_sl.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_snapshot_blob.bin" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_sr.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_sv.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_sw.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ta.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_te.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_th.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_tr.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_uk.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_v8_context_snapshot.bin" Value="..\ItemCreator\bin\x86\Release\."/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_vi.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_zhCN.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_zhTW.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.dll" Value="CefSharp.BrowserSubprocess.Core.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb" Value="CefSharp.BrowserSubprocess.Core.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.exe" Value="CefSharp.BrowserSubprocess.exe"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.pdb" Value="CefSharp.BrowserSubprocess.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.dll" Value="CefSharp.Core.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.pdb" Value="CefSharp.Core.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.xml" Value="CefSharp.Core.xml"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.XML" Value="CefSharp.WinForms.XML"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.dll" Value="CefSharp.WinForms.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.pdb" Value="CefSharp.WinForms.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.XML" Value="CefSharp.XML"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.dll" Value="CefSharp.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.pdb" Value="CefSharp.pdb"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe" Value="ItemCreator.exe"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe.config" Value="ItemCreator.exe.config"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.pdb" Value="ItemCreator.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_README.txt" Value="README.txt"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_am.pak" Value="am.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ar.pak" Value="ar.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_bg.pak" Value="bg.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_bn.pak" Value="bn.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ca.pak" Value="ca.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_cef.pak" Value="cef.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_cef_100_percent.pak" Value="cef_100_percent.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_cef_200_percent.pak" Value="cef_200_percent.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_cef_extensions.pak" Value="cef_extensions.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_chrome_elf.dll" Value="chrome_elf.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_cs.pak" Value="cs.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_d3dcompiler_47.dll" Value="d3dcompiler_47.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_da.pak" Value="da.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_de.pak" Value="de.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_devtools_resources.pak" Value="devtools_resources.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_el.pak" Value="el.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_enGB.pak" Value="en-GB.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_enUS.pak" Value="en-US.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_es.pak" Value="es.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_es419.pak" Value="es-419.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_et.pak" Value="et.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_fa.pak" Value="fa.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_fi.pak" Value="fi.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_fil.pak" Value="fil.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_fr.pak" Value="fr.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_gu.pak" Value="gu.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_he.pak" Value="he.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_hi.pak" Value="hi.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_hr.pak" Value="hr.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_hu.pak" Value="hu.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_icudtl.dat" Value="icudtl.dat"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_id.pak" Value="id.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_it.pak" Value="it.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ja.pak" Value="ja.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_kn.pak" Value="kn.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ko.pak" Value="ko.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_libEGL.dll" Value="libEGL.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_libEGL.dll_1" Value="libEGL.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_libGLESv2.dll" Value="libGLESv2.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_libGLESv2.dll_1" Value="libGLESv2.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_libcef.dll" Value="libcef.dll"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_lt.pak" Value="lt.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_lv.pak" Value="lv.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ml.pak" Value="ml.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_mr.pak" Value="mr.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ms.pak" Value="ms.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_nb.pak" Value="nb.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_nl.pak" Value="nl.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_pl.pak" Value="pl.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ptBR.pak" Value="pt-BR.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ptPT.pak" Value="pt-PT.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ro.pak" Value="ro.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ru.pak" Value="ru.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_sk.pak" Value="sk.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_sl.pak" Value="sl.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_snapshot_blob.bin" Value="snapshot_blob.bin"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_sr.pak" Value="sr.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_sv.pak" Value="sv.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_sw.pak" Value="sw.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ta.pak" Value="ta.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_te.pak" Value="te.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_th.pak" Value="th.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_tr.pak" Value="tr.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_uk.pak" Value="uk.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_v8_context_snapshot.bin" Value="v8_context_snapshot.bin"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_vi.pak" Value="vi.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_zhCN.pak" Value="zh-CN.pak"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_zhTW.pak" Value="zh-TW.pak"/>
     <ROW Property="ALLUSERS" Value="1"/>
     <ROW Property="ARPCOMMENTS" Value="This installer database contains the logic and data required to install [|ProductName]." ValueLocId="*"/>
     <ROW Property="ARPPRODUCTICON" Value="ico.exe" Type="8"/>
     <ROW Property="ARPURLINFOABOUT" Value="https://stv233.pro/en/me/"/>
     <ROW Property="FILE_TO_LAUNCH" Value="[#ItemCreator.exe]"/>
     <ROW Property="Manufacturer" Value="Stv233.Pro"/>
-    <ROW Property="ProductCode" Value="1033:{9B81C2E8-165D-42E1-8331-1195ECE1F49B} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{F17507DF-8798-4506-A83A-FF6E8A6A0B47} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Item Creator"/>
-    <ROW Property="ProductVersion" Value="0.5.2" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.6.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{C2E9136B-711C-4B5D-AA33-8AA6FC64ED33}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -36,11 +200,17 @@
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="StartMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTM~1|StartMenuFolder" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
+    <ROW Directory="__Dir" Directory_Parent="ItemCreator_Dir" DefaultDir="."/>
+    <ROW Directory="locales_Dir" Directory_Parent="__Dir" DefaultDir="locales"/>
+    <ROW Directory="swiftshader_Dir" Directory_Parent="__Dir" DefaultDir="SWIFTS~1|swiftshader"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiCompsComponent">
     <ROW Component="APPDIR" ComponentId="{709F9CBC-5E55-44FC-9E82-49A7DF38ABB5}" Directory_="APPDIR" Attributes="0"/>
+    <ROW Component="ItemCreator_ContentOutput_." ComponentId="{2DA2BCFD-2253-484F-A7F0-4AEEC42B02D5}" Directory_="__Dir" Attributes="0" KeyPath="cef.pak" Type="0"/>
+    <ROW Component="ItemCreator_ContentOutput_._locales" ComponentId="{6BB1E3FA-D6BC-41E2-8D2B-4313ADABC62B}" Directory_="locales_Dir" Attributes="0" KeyPath="am.pak" Type="0"/>
+    <ROW Component="ItemCreator_ContentOutput_._swiftshader" ComponentId="{514A7F3A-8CD0-4DCB-9A87-49C81CF64BB5}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libGLESv2.dll_1"/>
     <ROW Component="ItemCreator_PrimaryOutput" ComponentId="{2FD493D3-C147-4CD9-8959-0E3B6BED4EBB}" Directory_="ItemCreator_Dir" Attributes="0" KeyPath="ItemCreator.exe"/>
-    <ROW Component="ItemCreator_SymbolsOutput" ComponentId="{608EA5E9-B67F-4780-8852-E889174BEAAC}" Directory_="ItemCreator_Dir" Attributes="0" KeyPath="ItemCreator.pdb"/>
+    <ROW Component="ItemCreator_SymbolsOutput" ComponentId="{11D4179F-399E-431E-A0C9-B4140CF40F0C}" Directory_="ItemCreator_Dir" Attributes="0" KeyPath="ItemCreator.pdb"/>
     <ROW Component="ProductInformation" ComponentId="{7DE1D310-130D-481C-AA54-41E49031E046}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
     <ROW Component="SHORTCUTDIR" ComponentId="{FC1F39C6-EC02-4F27-A4EF-934EB1E6F444}" Directory_="SHORTCUTDIR" Attributes="0"/>
   </COMPONENT>
@@ -51,12 +221,176 @@
   <COMPONENT cid="caphyon.advinst.msicomp.MsiFilesComponent">
     <ROW File="ItemCreator.exe" Component_="ItemCreator_PrimaryOutput" FileName="ITEMCR~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ItemCreator.exe&gt;" SelfReg="false" DigSign="true"/>
     <ROW File="ItemCreator.exe.config" Component_="ItemCreator_PrimaryOutput" FileName="ITEMCR~2.CON|[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe.config]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ItemCreator.exe.config&gt;" SelfReg="false"/>
+    <ROW File="cef.pak" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_cef.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_cef.pak&gt;" SelfReg="false"/>
+    <ROW File="cef_100_percent.pak" Component_="ItemCreator_ContentOutput_." FileName="CEF_10~2.PAK|[|AI_PROPPATH_FILENAME_PERBUILD_cef_100_percent.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_cef_100_percent.pak&gt;" SelfReg="false"/>
+    <ROW File="cef_200_percent.pak" Component_="ItemCreator_ContentOutput_." FileName="CEF_20~2.PAK|[|AI_PROPPATH_FILENAME_PERBUILD_cef_200_percent.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_cef_200_percent.pak&gt;" SelfReg="false"/>
+    <ROW File="cef_extensions.pak" Component_="ItemCreator_ContentOutput_." FileName="CEF_EX~2.PAK|[|AI_PROPPATH_FILENAME_PERBUILD_cef_extensions.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_cef_extensions.pak&gt;" SelfReg="false"/>
+    <ROW File="chrome_elf.dll" Component_="ItemCreator_ContentOutput_." FileName="CHROME~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_chrome_elf.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_chrome_elf.dll&gt;" SelfReg="false"/>
+    <ROW File="d3dcompiler_47.dll" Component_="ItemCreator_ContentOutput_." FileName="D3DCOM~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_d3dcompiler_47.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_d3dcompiler_47.dll&gt;" SelfReg="false"/>
+    <ROW File="devtools_resources.pak" Component_="ItemCreator_ContentOutput_." FileName="DEVTOO~2.PAK|[|AI_PROPPATH_FILENAME_PERBUILD_devtools_resources.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_devtools_resources.pak&gt;" SelfReg="false"/>
+    <ROW File="icudtl.dat" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_icudtl.dat]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_icudtl.dat&gt;" SelfReg="false"/>
+    <ROW File="libcef.dll" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_libcef.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_libcef.dll&gt;" SelfReg="false"/>
+    <ROW File="libEGL.dll" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_libEGL.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_libEGL.dll&gt;" SelfReg="false"/>
+    <ROW File="libGLESv2.dll" Component_="ItemCreator_ContentOutput_." FileName="LIBGLE~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_libGLESv2.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_libGLESv2.dll&gt;" SelfReg="false"/>
+    <ROW File="am.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_am.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_am.pak&gt;" SelfReg="false"/>
+    <ROW File="ar.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ar.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ar.pak&gt;" SelfReg="false"/>
+    <ROW File="bg.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_bg.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_bg.pak&gt;" SelfReg="false"/>
+    <ROW File="bn.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_bn.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_bn.pak&gt;" SelfReg="false"/>
+    <ROW File="ca.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ca.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ca.pak&gt;" SelfReg="false"/>
+    <ROW File="cs.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_cs.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_cs.pak&gt;" SelfReg="false"/>
+    <ROW File="da.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_da.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_da.pak&gt;" SelfReg="false"/>
+    <ROW File="de.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_de.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_de.pak&gt;" SelfReg="false"/>
+    <ROW File="el.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_el.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_el.pak&gt;" SelfReg="false"/>
+    <ROW File="enGB.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_enGB.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_enGB.pak&gt;" SelfReg="false"/>
+    <ROW File="enUS.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_enUS.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_enUS.pak&gt;" SelfReg="false"/>
+    <ROW File="es419.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_es419.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_es419.pak&gt;" SelfReg="false"/>
+    <ROW File="es.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_es.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_es.pak&gt;" SelfReg="false"/>
+    <ROW File="et.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_et.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_et.pak&gt;" SelfReg="false"/>
+    <ROW File="fa.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_fa.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_fa.pak&gt;" SelfReg="false"/>
+    <ROW File="fi.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_fi.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_fi.pak&gt;" SelfReg="false"/>
+    <ROW File="fil.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_fil.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_fil.pak&gt;" SelfReg="false"/>
+    <ROW File="fr.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_fr.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_fr.pak&gt;" SelfReg="false"/>
+    <ROW File="gu.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_gu.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_gu.pak&gt;" SelfReg="false"/>
+    <ROW File="he.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_he.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_he.pak&gt;" SelfReg="false"/>
+    <ROW File="hi.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_hi.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_hi.pak&gt;" SelfReg="false"/>
+    <ROW File="hr.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_hr.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_hr.pak&gt;" SelfReg="false"/>
+    <ROW File="hu.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_hu.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_hu.pak&gt;" SelfReg="false"/>
+    <ROW File="id.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_id.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_id.pak&gt;" SelfReg="false"/>
+    <ROW File="it.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_it.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_it.pak&gt;" SelfReg="false"/>
+    <ROW File="ja.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ja.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ja.pak&gt;" SelfReg="false"/>
+    <ROW File="kn.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_kn.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_kn.pak&gt;" SelfReg="false"/>
+    <ROW File="ko.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ko.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ko.pak&gt;" SelfReg="false"/>
+    <ROW File="lt.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_lt.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_lt.pak&gt;" SelfReg="false"/>
+    <ROW File="lv.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_lv.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_lv.pak&gt;" SelfReg="false"/>
+    <ROW File="ml.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ml.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ml.pak&gt;" SelfReg="false"/>
+    <ROW File="mr.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_mr.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_mr.pak&gt;" SelfReg="false"/>
+    <ROW File="ms.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ms.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ms.pak&gt;" SelfReg="false"/>
+    <ROW File="nb.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_nb.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_nb.pak&gt;" SelfReg="false"/>
+    <ROW File="nl.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_nl.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_nl.pak&gt;" SelfReg="false"/>
+    <ROW File="pl.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_pl.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_pl.pak&gt;" SelfReg="false"/>
+    <ROW File="ptBR.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ptBR.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ptBR.pak&gt;" SelfReg="false"/>
+    <ROW File="ptPT.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ptPT.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ptPT.pak&gt;" SelfReg="false"/>
+    <ROW File="ro.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ro.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ro.pak&gt;" SelfReg="false"/>
+    <ROW File="ru.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ru.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ru.pak&gt;" SelfReg="false"/>
+    <ROW File="sk.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_sk.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_sk.pak&gt;" SelfReg="false"/>
+    <ROW File="sl.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_sl.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_sl.pak&gt;" SelfReg="false"/>
+    <ROW File="sr.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_sr.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_sr.pak&gt;" SelfReg="false"/>
+    <ROW File="sv.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_sv.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_sv.pak&gt;" SelfReg="false"/>
+    <ROW File="sw.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_sw.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_sw.pak&gt;" SelfReg="false"/>
+    <ROW File="ta.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_ta.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ta.pak&gt;" SelfReg="false"/>
+    <ROW File="te.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_te.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_te.pak&gt;" SelfReg="false"/>
+    <ROW File="th.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_th.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_th.pak&gt;" SelfReg="false"/>
+    <ROW File="tr.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_tr.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_tr.pak&gt;" SelfReg="false"/>
+    <ROW File="uk.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_uk.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_uk.pak&gt;" SelfReg="false"/>
+    <ROW File="vi.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_vi.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_vi.pak&gt;" SelfReg="false"/>
+    <ROW File="zhCN.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_zhCN.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_zhCN.pak&gt;" SelfReg="false"/>
+    <ROW File="zhTW.pak" Component_="ItemCreator_ContentOutput_._locales" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_zhTW.pak]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_zhTW.pak&gt;" SelfReg="false"/>
+    <ROW File="README.txt" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_README.txt]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_README.txt&gt;" SelfReg="false"/>
+    <ROW File="snapshot_blob.bin" Component_="ItemCreator_ContentOutput_." FileName="SNAPSH~2.BIN|[|AI_PROPPATH_FILENAME_PERBUILD_snapshot_blob.bin]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_snapshot_blob.bin&gt;" SelfReg="false"/>
+    <ROW File="libEGL.dll_1" Component_="ItemCreator_ContentOutput_._swiftshader" FileName="[|AI_PROPPATH_FILENAME_PERBUILD_libEGL.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_libEGL.dll_1&gt;" SelfReg="false"/>
+    <ROW File="libGLESv2.dll_1" Component_="ItemCreator_ContentOutput_._swiftshader" FileName="LIBGLE~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_libGLESv2.dll_1]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_libGLESv2.dll_1&gt;" SelfReg="false"/>
+    <ROW File="v8_context_snapshot.bin" Component_="ItemCreator_ContentOutput_." FileName="V8_CON~2.BIN|[|AI_PROPPATH_FILENAME_PERBUILD_v8_context_snapshot.bin]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_v8_context_snapshot.bin&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.BrowserSubprocess.Core.dll" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~2.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.Core.dll&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.BrowserSubprocess.Core.pdb" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.BrowserSubprocess.exe" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~2.EXE|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.exe]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.exe&gt;" SelfReg="false" DigSign="true"/>
+    <ROW File="CefSharp.BrowserSubprocess.pdb" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~3.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.pdb&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.Core.dll" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~3.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.Core.dll&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.Core.pdb" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~4.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.Core.pdb&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.Core.xml" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~2.XML|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.xml]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.Core.xml&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.dll" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.dll&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.pdb" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.pdb&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.XML" Component_="ItemCreator_ContentOutput_." FileName="[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.XML]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.XML&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.WinForms.dll" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~4.DLL|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.dll]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.WinForms.dll&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.WinForms.pdb" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~5.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.WinForms.pdb&gt;" SelfReg="false"/>
+    <ROW File="CefSharp.WinForms.XML" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~3.XML|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.XML]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.WinForms.XML&gt;" SelfReg="false"/>
     <ROW File="ItemCreator.pdb" Component_="ItemCreator_SymbolsOutput" FileName="ITEMCR~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ItemCreator.pdb&gt;" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.Core.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.exe]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.Core.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.Core.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.Core.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.Core.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.Core.xml" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.Core.xml]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.Core.xml]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.WinForms.XML" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.WinForms.XML]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.XML]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.WinForms.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.WinForms.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.WinForms.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.WinForms.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.XML" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.XML]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.XML]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_CefSharp.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.pdb]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_ItemCreator.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_ItemCreator.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe.config]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_ItemCreator.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_ItemCreator.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_README.txt" Path="[|AI_PROPPATH_DIR_PERBUILD_README.txt]\[|AI_PROPPATH_FILENAME_PERBUILD_README.txt]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_am.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_am.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_am.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ar.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ar.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ar.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_bg.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_bg.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_bg.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_bn.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_bn.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_bn.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ca.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ca.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ca.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_cef.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_cef.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_cef.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_cef_100_percent.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_cef_100_percent.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_cef_100_percent.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_cef_200_percent.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_cef_200_percent.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_cef_200_percent.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_cef_extensions.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_cef_extensions.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_cef_extensions.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_chrome_elf.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_chrome_elf.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_chrome_elf.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_cs.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_cs.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_cs.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_d3dcompiler_47.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_d3dcompiler_47.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_d3dcompiler_47.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_da.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_da.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_da.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_de.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_de.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_de.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_devtools_resources.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_devtools_resources.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_devtools_resources.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_el.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_el.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_el.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_enGB.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_enGB.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_enGB.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_enUS.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_enUS.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_enUS.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_es.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_es.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_es.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_es419.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_es419.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_es419.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_et.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_et.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_et.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_fa.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_fa.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_fa.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_fi.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_fi.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_fi.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_fil.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_fil.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_fil.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_fr.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_fr.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_fr.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_gu.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_gu.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_gu.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_he.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_he.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_he.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_hi.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_hi.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_hi.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_hr.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_hr.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_hr.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_hu.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_hu.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_hu.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_icudtl.dat" Path="[|AI_PROPPATH_DIR_PERBUILD_icudtl.dat]\[|AI_PROPPATH_FILENAME_PERBUILD_icudtl.dat]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_id.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_id.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_id.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_it.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_it.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_it.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ja.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ja.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ja.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_kn.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_kn.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_kn.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ko.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ko.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ko.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_libEGL.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_libEGL.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_libEGL.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_libEGL.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_libEGL.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_libEGL.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_libGLESv2.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_libGLESv2.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_libGLESv2.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_libGLESv2.dll_1" Path="[|AI_PROPPATH_DIR_PERBUILD_libGLESv2.dll_1]\[|AI_PROPPATH_FILENAME_PERBUILD_libGLESv2.dll_1]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_libcef.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_libcef.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_libcef.dll]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_lt.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_lt.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_lt.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_lv.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_lv.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_lv.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ml.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ml.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ml.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_mr.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_mr.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_mr.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ms.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ms.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ms.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_nb.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_nb.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_nb.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_nl.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_nl.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_nl.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_pl.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_pl.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_pl.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ptBR.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ptBR.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ptBR.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ptPT.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ptPT.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ptPT.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ro.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ro.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ro.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ru.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ru.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ru.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_sk.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_sk.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_sk.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_sl.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_sl.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_sl.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_snapshot_blob.bin" Path="[|AI_PROPPATH_DIR_PERBUILD_snapshot_blob.bin]\[|AI_PROPPATH_FILENAME_PERBUILD_snapshot_blob.bin]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_sr.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_sr.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_sr.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_sv.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_sv.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_sv.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_sw.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_sw.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_sw.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ta.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ta.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ta.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_te.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_te.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_te.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_th.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_th.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_th.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_tr.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_tr.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_tr.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_uk.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_uk.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_uk.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_v8_context_snapshot.bin" Path="[|AI_PROPPATH_DIR_PERBUILD_v8_context_snapshot.bin]\[|AI_PROPPATH_FILENAME_PERBUILD_v8_context_snapshot.bin]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_vi.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_vi.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_vi.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_zhCN.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_zhCN.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_zhCN.pak]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_zhTW.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_zhTW.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_zhTW.pak]" Type="2" Content="0"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.BootstrOptComponent">
     <ROW BootstrOptKey="GlobalOptions" DownloadFolder="[AppDataFolder][|Manufacturer]\[|ProductName]\prerequisites" Options="2"/>
@@ -132,6 +466,9 @@
     <ROW Feature_="MainFeature" Component_="ProductInformation"/>
     <ROW Feature_="MainFeature" Component_="ItemCreator_PrimaryOutput"/>
     <ROW Feature_="MainFeature" Component_="SHORTCUTDIR"/>
+    <ROW Feature_="MainFeature" Component_="ItemCreator_ContentOutput_."/>
+    <ROW Feature_="MainFeature" Component_="ItemCreator_ContentOutput_._locales"/>
+    <ROW Feature_="MainFeature" Component_="ItemCreator_ContentOutput_._swiftshader"/>
     <ROW Feature_="MainFeature" Component_="ItemCreator_SymbolsOutput"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
@@ -176,6 +513,88 @@
   <COMPONENT cid="caphyon.advinst.msicomp.VsProjectComponent">
     <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="PrimaryOutput" OutputFile="ItemCreator.exe" OutputFileShortcut="AI_PROPPATH_FILENAME_PERBUILD_ItemC"/>
     <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="PrimaryOutput" OutputFile="ItemCreator.exe.config"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="cef.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="cef_100_percent.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="cef_200_percent.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="cef_extensions.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="chrome_elf.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="d3dcompiler_47.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="devtools_resources.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="icudtl.dat"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="libcef.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="libEGL.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="libGLESv2.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="am.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ar.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="bg.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="bn.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ca.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="cs.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="da.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="de.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="el.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="enGB.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="enUS.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="es419.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="es.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="et.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="fa.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="fi.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="fil.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="fr.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="gu.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="he.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="hi.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="hr.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="hu.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="id.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="it.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ja.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="kn.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ko.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="lt.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="lv.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ml.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="mr.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ms.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="nb.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="nl.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="pl.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ptBR.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ptPT.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ro.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ru.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="sk.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="sl.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="sr.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="sv.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="sw.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ta.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="te.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="th.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="tr.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="uk.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="vi.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="zhCN.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="zhTW.pak"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="README.txt"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="snapshot_blob.bin"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="libEGL.dll_1"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="libGLESv2.dll_1"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="v8_context_snapshot.bin"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.BrowserSubprocess.Core.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.BrowserSubprocess.Core.pdb"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.BrowserSubprocess.exe"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.BrowserSubprocess.pdb"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.Core.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.Core.pdb"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.Core.xml"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.pdb"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.XML"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.WinForms.dll"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.WinForms.pdb"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.WinForms.XML"/>
     <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="SymbolsOutput" OutputFile="ItemCreator.pdb"/>
   </COMPONENT>
 </DOCUMENT>

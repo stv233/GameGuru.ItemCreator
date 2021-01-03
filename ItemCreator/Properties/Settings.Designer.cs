@@ -60,7 +60,7 @@ namespace ItemCreator.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("0.5.2")]
+        [global::System.Configuration.DefaultSettingValueAttribute("0.6.0")]
         public string Version {
             get {
                 return ((string)(this["Version"]));
