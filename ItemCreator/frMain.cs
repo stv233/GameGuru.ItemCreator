@@ -19,6 +19,7 @@ namespace ItemCreator
         private Button btNewProProject;
         private Button btNewAISProject;
         private Button btOpenProject;
+        private Panel pnBrowserPanel;
         private ChromiumWebBrowser wbBrowser;
 
         public frMain(string[] args)
@@ -48,8 +49,7 @@ namespace ItemCreator
             projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
             projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
 
-            #pragma warning disable CS0618 // Тип или член устарел
-            wbBrowser = new ChromiumWebBrowser()
+            pnBrowserPanel = new Panel
             {
                 Width = this.ClientSize.Width / 4 * 2 - 10,
                 Height = this.ClientSize.Height / 3,
@@ -57,15 +57,17 @@ namespace ItemCreator
                 Top = msMain.Height + this.ClientSize.Height / 3 / 3 * 2,
                 Parent = this
             };
-            #pragma warning restore CS0618 // Тип или член устарел
+            wbBrowser = new ChromiumWebBrowser("https://stv233.pro/en/GameGuru-Scripts/");
+            wbBrowser.Parent = pnBrowserPanel;
+            
 
             pnLatestProjects = new Panel
             {
                 AutoScroll = true,
                 Width = this.ClientSize.Width / 4,
-                Height = wbBrowser.Height,
-                Left = wbBrowser.Left + wbBrowser.Width + 20,
-                Top = wbBrowser.Top,
+                Height = pnBrowserPanel.Height,
+                Left = pnBrowserPanel.Left + pnBrowserPanel.Width + 20,
+                Top = pnBrowserPanel.Top,
                 BackColor = System.Drawing.Color.FromArgb(64, 64, 64),
                 BorderStyle = BorderStyle.Fixed3D,
                 Parent = this
@@ -169,34 +171,34 @@ namespace ItemCreator
                 projectControlPanel.Top = msMain.Height;
                 projectControlPanel.Width = this.ClientSize.Width;
                 projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
-                wbBrowser.Width = this.ClientSize.Width / 4 * 2 - 10;
-                wbBrowser.Height = this.ClientSize.Height / 3;
-                wbBrowser.Left = this.ClientSize.Width / 4 / 2;
-                wbBrowser.Top = msMain.Height + this.ClientSize.Height / 3 / 3 * 2;
+                pnBrowserPanel.Width = this.ClientSize.Width / 4 * 2 - 10;
+                pnBrowserPanel.Height = this.ClientSize.Height / 3;
+                pnBrowserPanel.Left = this.ClientSize.Width / 4 / 2;
+                pnBrowserPanel.Top = msMain.Height + this.ClientSize.Height / 3 / 3 * 2;
                 pnLatestProjects.Width = this.ClientSize.Width / 4;
-                pnLatestProjects.Height = wbBrowser.Height;
-                pnLatestProjects.Left = wbBrowser.Left + wbBrowser.Width + 20;
-                pnLatestProjects.Top = wbBrowser.Top;
+                pnLatestProjects.Height = pnBrowserPanel.Height;
+                pnLatestProjects.Left = pnBrowserPanel.Left + pnBrowserPanel.Width + 20;
+                pnLatestProjects.Top = pnBrowserPanel.Top;
                 btClear.Left = pnLatestProjects.Left + pnLatestProjects.Width - btClear.Width;
                 btClear.Top = pnLatestProjects.Top - btClear.Height - 5;
                 lbLatestProjects.Left = pnLatestProjects.Left;
                 lbLatestProjects.Top = btClear.Top;
-                btNewSimpleProject.Width = ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 * 1 + 15;
+                btNewSimpleProject.Width = ((pnLatestProjects.Left + pnLatestProjects.Width) - pnBrowserPanel.Left) / 5 * 1 + 15;
                 btNewSimpleProject.Height = 50;
-                btNewSimpleProject.Top = wbBrowser.Top + wbBrowser.Height + 10;
-                btNewSimpleProject.Left = wbBrowser.Left;
+                btNewSimpleProject.Top = pnBrowserPanel.Top + pnBrowserPanel.Height + 10;
+                btNewSimpleProject.Left = pnBrowserPanel.Left;
                 btNewProProject.Width = btNewSimpleProject.Width;
                 btNewProProject.Height = 50;
                 btNewProProject.Top = btNewSimpleProject.Top;
-                btNewProProject.Left = btNewSimpleProject.Left + btNewSimpleProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 / 3 - 20;
+                btNewProProject.Left = btNewSimpleProject.Left + btNewSimpleProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - pnBrowserPanel.Left) / 5 / 3 - 20;
                 btNewAISProject.Width = btNewProProject.Width;
                 btNewAISProject.Height = 50;
                 btNewAISProject.Top = btNewProProject.Top;
-                btNewAISProject.Left = btNewProProject.Left + btNewProProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 / 3 - 20;
+                btNewAISProject.Left = btNewProProject.Left + btNewProProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - pnBrowserPanel.Left) / 5 / 3 - 20;
                 btOpenProject.Width = btNewAISProject.Width;
                 btOpenProject.Height = 50;
                 btOpenProject.Top = btNewAISProject.Top;
-                btOpenProject.Left = btNewAISProject.Left + btNewAISProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 / 3 - 20;
+                btOpenProject.Left = btNewAISProject.Left + btNewAISProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - pnBrowserPanel.Left) / 5 / 3 - 20;
                 LoadLatestProjects();
                 settings = new Properties.Settings();
                 settings.Width = this.ClientSize.Width;

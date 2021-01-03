@@ -92,8 +92,15 @@ namespace Updater
                 if (System.Windows.Forms.MessageBox.Show("New update found. Would you like to update the program now?",
                         "Update detected", System.Windows.Forms.MessageBoxButtons.YesNo, System.Windows.Forms.MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.Yes)
                 {
+                    try
+                    {
+                        var fr = (ItemCreator.frСheckingForUpdates)ItemCreator.frСheckingForUpdates.ActiveForm;
+                        fr.Message.Text = "Download update...";
+                    }
+                    catch { }
                     Update = true;
                     return releaseLink;
+                    
                 }
                 else
                 {
