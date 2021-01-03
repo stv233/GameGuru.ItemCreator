@@ -1,12 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Threading.Tasks;
+using CefSharp;
+using CefSharp.WinForms;
 
 namespace ItemCreator
 {
@@ -21,6 +19,7 @@ namespace ItemCreator
         private Button btNewProProject;
         private Button btNewAISProject;
         private Button btOpenProject;
+        private ChromiumWebBrowser wbBrowser;
 
         public frMain(string[] args)
         {
@@ -30,6 +29,7 @@ namespace ItemCreator
             this.MinimumSize = new Size(800, 600);
             this.Text = "Item Creator " + settings.Version;
             this.Icon = Properties.Resources.ico;
+            this.Load += new System.EventHandler(frMain_Load);
 
             if (settings.LatestProjects == null)
             {
@@ -47,6 +47,61 @@ namespace ItemCreator
             projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
             projectControlPanel.ProjectCnanged += projectControlPanel_ProjectCnanged;
             projectControlPanel.ProjectSaved += projectControlPanel_ProjectSaved;
+
+            #pragma warning disable CS0618 // Тип или член устарел
+            wbBrowser = new ChromiumWebBrowser()
+            {
+                Width = this.ClientSize.Width / 4 * 2 - 10,
+                Height = this.ClientSize.Height / 3,
+                Left = this.ClientSize.Width / 4 / 2,
+                Top = msMain.Height + this.ClientSize.Height / 3 / 3 * 2,
+                Parent = this
+            };
+            #pragma warning restore CS0618 // Тип или член устарел
+
+            pnLatestProjects = new Panel
+            {
+                AutoScroll = true,
+                Width = this.ClientSize.Width / 4,
+                Height = wbBrowser.Height,
+                Left = wbBrowser.Left + wbBrowser.Width + 20,
+                Top = wbBrowser.Top,
+                BackColor = System.Drawing.Color.FromArgb(64, 64, 64),
+                BorderStyle = BorderStyle.Fixed3D,
+                Parent = this
+            };
+
+            btClear = new Button
+            {
+                AutoSize = true,
+                Text = "Clear",
+                Cursor = Cursors.Hand,
+                FlatStyle = FlatStyle.Popup,
+                BackColor = Color.FromArgb(64, 64, 64),
+                ForeColor = Color.White,
+                Parent = this
+            };
+            btClear.Left = pnLatestProjects.Left + pnLatestProjects.Width - btClear.Width;
+            btClear.Top = pnLatestProjects.Top - btClear.Height - 5;
+            btClear.Click += (s, e) =>
+            {
+                var setting = new Properties.Settings();
+                setting.LatestProjects.Clear();
+                setting.Save();
+                LoadLatestProjects();
+            };
+
+            lbLatestProjects = new Label
+            {
+                AutoSize = true,
+                Font = new Font("Arial", 10),
+                Text = "Latest projects",
+                ForeColor = Color.White,
+                TextAlign = ContentAlignment.MiddleCenter,
+                Parent = this
+            };
+            lbLatestProjects.Left = pnLatestProjects.Left + pnLatestProjects.Width / 2 - lbLatestProjects.Width / 2;
+            lbLatestProjects.Top = btClear.Top;
 
             btNewProProject = new Button
             {
@@ -108,75 +163,40 @@ namespace ItemCreator
             btOpenProject.Top = btNewAISProject.Top + btNewAISProject.Height + 20;
             btOpenProject.Click += openToolStripMenuItem_Click;
 
-            pnLatestProjects = new Panel
-            {
-                AutoScroll = true,
-                Width = this.ClientSize.Width / 2 - 30,
-                Height = (btOpenProject.Top + btOpenProject.Height) - btNewSimpleProject.Top + 140,
-                Left = this.Width / 4 + 10,
-                Top = btNewSimpleProject.Top  - 70,
-                BackColor = System.Drawing.Color.FromArgb(64, 64, 64),
-                Parent = this
-            };
-
-            lbLatestProjects = new Label
-            {
-                AutoSize = true,
-                Font = new Font("Arial", 25),
-                Text = "Latest projects",
-                ForeColor = Color.White,
-                TextAlign = ContentAlignment.MiddleCenter,
-                Parent = this
-            };
-            lbLatestProjects.Left = pnLatestProjects.Left + pnLatestProjects.Width / 2 - lbLatestProjects.Width / 2;
-            lbLatestProjects.Top = pnLatestProjects.Top - lbLatestProjects.Height;
-
-            btClear = new Button
-            {
-                AutoSize = true,
-                Text = "Clear",
-                Cursor = Cursors.Hand,
-                FlatStyle = FlatStyle.Popup,
-                BackColor = Color.FromArgb(64, 64, 64),
-                ForeColor = Color.White,
-                Parent = this
-            };
-            btClear.Left = pnLatestProjects.Left + pnLatestProjects.Width - btClear.Width;
-            btClear.Top = pnLatestProjects.Top - btClear.Height - 5;
-            btClear.Click += (s, e) =>
-            {
-                var setting = new Properties.Settings();
-                setting.LatestProjects.Clear();
-                setting.Save();
-                LoadLatestProjects();
-            };
-
             this.Resize += (s, e) =>
             {
                 projectControlPanel.Left = 0;
                 projectControlPanel.Top = msMain.Height;
                 projectControlPanel.Width = this.ClientSize.Width;
                 projectControlPanel.Height = this.ClientSize.Height - msMain.Height;
-                btNewProProject.Width = this.Width / 4 - 10;
-                btNewProProject.Height = 50;
-                btNewProProject.Top = Top = this.ClientSize.Height / 2 - btNewProProject.Height - 10 ;
-                btNewSimpleProject.Width = this.Width / 4 - 10;
-                btNewSimpleProject.Height = 50;
-                btNewSimpleProject.Top = btNewProProject.Top - btNewSimpleProject.Height - 20 ;
-                btNewAISProject.Width = this.Width / 4 - 10;
-                btNewAISProject.Height = 50;
-                btNewAISProject.Top = this.ClientSize.Height / 2 + 10 ;
-                btOpenProject.Width = this.Width / 4 - 10;
-                btOpenProject.Height = 50;
-                btOpenProject.Top = btNewAISProject.Top + btNewAISProject.Height + 20 ;
-                pnLatestProjects.Width = this.ClientSize.Width / 4 * 3 - 30;
-                pnLatestProjects.Height = (btOpenProject.Top + btOpenProject.Height) - btNewSimpleProject.Top + 140;
-                pnLatestProjects.Left = this.Width / 4 + 10;
-                pnLatestProjects.Top = btNewSimpleProject.Top - 70;
-                lbLatestProjects.Left = pnLatestProjects.Left + pnLatestProjects.Width / 2 - lbLatestProjects.Width / 2;
-                lbLatestProjects.Top = pnLatestProjects.Top - lbLatestProjects.Height;
+                wbBrowser.Width = this.ClientSize.Width / 4 * 2 - 10;
+                wbBrowser.Height = this.ClientSize.Height / 3;
+                wbBrowser.Left = this.ClientSize.Width / 4 / 2;
+                wbBrowser.Top = msMain.Height + this.ClientSize.Height / 3 / 3 * 2;
+                pnLatestProjects.Width = this.ClientSize.Width / 4;
+                pnLatestProjects.Height = wbBrowser.Height;
+                pnLatestProjects.Left = wbBrowser.Left + wbBrowser.Width + 20;
+                pnLatestProjects.Top = wbBrowser.Top;
                 btClear.Left = pnLatestProjects.Left + pnLatestProjects.Width - btClear.Width;
                 btClear.Top = pnLatestProjects.Top - btClear.Height - 5;
+                lbLatestProjects.Left = pnLatestProjects.Left;
+                lbLatestProjects.Top = btClear.Top;
+                btNewSimpleProject.Width = ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 * 1 + 15;
+                btNewSimpleProject.Height = 50;
+                btNewSimpleProject.Top = wbBrowser.Top + wbBrowser.Height + 10;
+                btNewSimpleProject.Left = wbBrowser.Left;
+                btNewProProject.Width = btNewSimpleProject.Width;
+                btNewProProject.Height = 50;
+                btNewProProject.Top = btNewSimpleProject.Top;
+                btNewProProject.Left = btNewSimpleProject.Left + btNewSimpleProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 / 3 - 20;
+                btNewAISProject.Width = btNewProProject.Width;
+                btNewAISProject.Height = 50;
+                btNewAISProject.Top = btNewProProject.Top;
+                btNewAISProject.Left = btNewProProject.Left + btNewProProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 / 3 - 20;
+                btOpenProject.Width = btNewAISProject.Width;
+                btOpenProject.Height = 50;
+                btOpenProject.Top = btNewAISProject.Top;
+                btOpenProject.Left = btNewAISProject.Left + btNewAISProject.Width + ((pnLatestProjects.Left + pnLatestProjects.Width) - wbBrowser.Left) / 5 / 3 - 20;
                 LoadLatestProjects();
                 settings = new Properties.Settings();
                 settings.Width = this.ClientSize.Width;
@@ -219,6 +239,35 @@ namespace ItemCreator
             }
 
             musicDiscsToolStripMenuItem.Checked = new Properties.Addons().MusicDiscs;
+        }
+
+        private async void frMain_Load(object sender,EventArgs e)
+        {
+            string page = await downloadStringAsync("");
+            if (!String.IsNullOrEmpty(page))
+            {
+                wbBrowser.Load(page);
+            }
+            else
+            {
+                wbBrowser.Load("https://stv233.pro/en/GameGuru-Scripts/");
+            }
+        }
+
+        private void InitializeChromium()
+        {
+            //Инициализировать настройки
+            CefSettings settings = new CefSettings();
+
+            settings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Stv233\ItemCreator\Page";
+            settings.ProductVersion = "Chrome/75 Chrome/85.0.4183.83";
+            settings.UserAgent = "Mozilla/5.0 (" + Environment.OSVersion + "; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) " + settings.ProductVersion;
+
+            //settings.CefCommandLineArgs.Add
+
+            Cef.Initialize(settings);
+
+
         }
 
         private void simpleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -493,7 +542,7 @@ namespace ItemCreator
                         BackColor = Color.Black,
                         ForeColor = Color.White,
                         Cursor = Cursors.Hand,
-                        Width = pnLatestProjects.Width,
+                        Width = pnLatestProjects.ClientSize.Width,
                         Height = 50,
                         Left = 0,
                         Top = 50 * i,
@@ -603,6 +652,27 @@ namespace ItemCreator
             addons.MusicDiscs = !addons.MusicDiscs;
             addons.Save();
             musicDiscsToolStripMenuItem.Checked = Addons.Enabled("MusicDiscs");
+        }
+
+        private async Task<string> downloadStringAsync(string url)
+        {
+            return await Task.Run(() =>
+            {
+                string result;
+                using (var wc = new WebClient())
+                {
+                    try
+                    {
+                        result = wc.DownloadString(url);
+                    }
+                    catch
+                    {
+                        result = "";
+                    }
+                    return result;
+                }
+            });
+            
         }
     }
 }
