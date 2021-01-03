@@ -38,6 +38,9 @@
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveAsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.settingToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addonsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.musicDiscsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -45,7 +48,8 @@
             // 
             this.msMain.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.projectToolStripMenuItem});
+            this.projectToolStripMenuItem,
+            this.settingToolStripMenuItem});
             this.msMain.Location = new System.Drawing.Point(0, 0);
             this.msMain.Name = "msMain";
             this.msMain.Size = new System.Drawing.Size(284, 24);
@@ -74,7 +78,7 @@
             this.aIsToolStripMenuItem});
             this.newToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
-            this.newToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.newToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.newToolStripMenuItem.Text = "New";
             // 
             // simpleToolStripMenuItem
@@ -109,7 +113,7 @@
             this.openToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.openToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.openToolStripMenuItem.Text = "Open...";
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
@@ -119,7 +123,7 @@
             this.saveToolStripMenuItem.Enabled = false;
             this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
@@ -129,7 +133,7 @@
             this.saveAsToolStripMenuItem.Enabled = false;
             this.saveAsToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.saveAsToolStripMenuItem.Text = "Save as...";
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
@@ -139,9 +143,37 @@
             this.closeToolStripMenuItem.Enabled = false;
             this.closeToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
-            this.closeToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.closeToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.closeToolStripMenuItem.Text = "Close";
             this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
+            // 
+            // settingToolStripMenuItem
+            // 
+            this.settingToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.addonsToolStripMenuItem});
+            this.settingToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.settingToolStripMenuItem.Name = "settingToolStripMenuItem";
+            this.settingToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.settingToolStripMenuItem.Text = "Setting";
+            // 
+            // addonsToolStripMenuItem
+            // 
+            this.addonsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.addonsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.musicDiscsToolStripMenuItem});
+            this.addonsToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.addonsToolStripMenuItem.Name = "addonsToolStripMenuItem";
+            this.addonsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.addonsToolStripMenuItem.Text = "Addons";
+            // 
+            // musicDiscsToolStripMenuItem
+            // 
+            this.musicDiscsToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.musicDiscsToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.musicDiscsToolStripMenuItem.Name = "musicDiscsToolStripMenuItem";
+            this.musicDiscsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.musicDiscsToolStripMenuItem.Text = "Music Discs";
+            this.musicDiscsToolStripMenuItem.Click += new System.EventHandler(this.musicDiscsToolStripMenuItem_Click);
             // 
             // frMain
             // 
@@ -171,6 +203,9 @@
         private System.Windows.Forms.ToolStripMenuItem proToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem aIsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem settingToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addonsToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem musicDiscsToolStripMenuItem;
     }
 }
 

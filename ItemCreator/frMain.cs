@@ -214,7 +214,11 @@ namespace ItemCreator
                 setting.Save();
                 LoadLatestProjects();
                 this.Text = "Item Creator " + settings.Version + " - " + System.IO.Path.GetFileNameWithoutExtension(projectPath);
+
+                
             }
+
+            musicDiscsToolStripMenuItem.Checked = new Properties.Addons().MusicDiscs;
         }
 
         private void simpleToolStripMenuItem_Click(object sender, EventArgs e)
@@ -591,6 +595,14 @@ namespace ItemCreator
             closeToolStripMenuItem.Enabled = false;
             var settings = new Properties.Settings();
             this.Text = "Item Creator " + settings.Version;
+        }
+
+        private void musicDiscsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var addons = new Properties.Addons();
+            addons.MusicDiscs = !addons.MusicDiscs;
+            addons.Save();
+            musicDiscsToolStripMenuItem.Checked = Addons.Enabled("MusicDiscs");
         }
     }
 }

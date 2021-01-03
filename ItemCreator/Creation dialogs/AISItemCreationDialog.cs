@@ -118,7 +118,45 @@ namespace ItemCreator
             cbType.Items.Add("Item that can be used");
             cbType.Items.Add("Item that can't be used");
             cbType.Items.Add("Note");
+            if (Addons.Enabled("MusicDiscs"))
+            {
+                cbType.Items.Add("Music disc (Music Discs add-on)");
+            }
             cbType.SelectedIndex = 0;
+            cbType.SelectedIndexChanged += (s, e) =>
+            {
+                if ((Addons.Enabled("MusicDiscs")) && (cbType.SelectedIndex == 4))
+                {
+                    if (cbEffect.Items.Contains("[Sound file]"))
+                    {
+                        cbEffect.Items.Clear();
+                        cbEffect.Items.Add("[Sound file]");
+                        cbEffect.Text = "[Sound file]";
+                    }
+                    else
+                    {
+                        cbEffect.Items.Clear();
+                        cbEffect.Text = "";
+                    }
+
+                    lbEffect.Text = "Sound file";
+                    nudEffectCount.Enabled = false;
+                }
+                else
+                {
+                    cbEffect.Items.Add("Heal");
+                    cbEffect.Items.Add("AddLives");
+                    cbEffect.Items.Add("SetHealth");
+                    cbEffect.Items.Add("SetLives");
+                    cbEffect.Items.Add("Damage");
+
+                    if (Addons.Enabled("MusicDiscs"))
+                    {
+                        lbEffect.Text = "Item effect";
+                        nudEffectCount.Enabled = true;
+                    }
+                }
+            };
 
             lbEffect = new Label
             {
@@ -150,6 +188,20 @@ namespace ItemCreator
             cbEffect.Items.Add("SetLives");
             cbEffect.Items.Add("Damage");
             cbEffect.SelectedIndex = 0;
+            cbEffect.Click += (s, e) =>
+            {
+                if ((Addons.Enabled("MusicDiscs")) && (cbType.SelectedIndex == 4))
+                {
+                    using (var ofd = new OpenFileDialog { Filter = "WAV (*.wav)|*.wav" })
+                    {
+                        if (ofd.ShowDialog() == DialogResult.OK)
+                        {
+
+                            cbEffect.Text = ofd.FileName;
+                        }
+                    }
+                }
+            };
 
             lbEffectCount = new Label
             {
@@ -262,7 +314,7 @@ namespace ItemCreator
                 Cursor = Cursors.Hand,
                 AutoSize = true,
                 Top = rtbDescription.Top + rtbDescription.Height + 20,
-                DialogResult = DialogResult.OK,
+                //DialogResult = DialogResult.OK,
                 Parent = this
             };
             btOk.Left = this.Width / 2 - btOk.Width - 20;
@@ -270,11 +322,29 @@ namespace ItemCreator
             {
                 Item = new AISItem(tbName.Text);
                 Item.Type = (ushort)cbType.SelectedIndex;
-                Item.Effect = cbEffect.Text;
+                if (Addons.Enabled("MusicDiscs") && (Item.Type == 4))
+                {
+                    if (cbEffect.Text == "")
+                    {
+                        MessageBox.Show("The Music Disc item cannot be saved without an audio file. Please enter a sound file.",
+                            "Music disc", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+
+                    if (cbEffect.Text != "[Sound file]")
+                    {
+                        Item.Effect = System.IO.File.ReadAllBytes(cbEffect.Text);
+                    }
+                }
+                else
+                {
+                    Item.Effect = cbEffect.Text;
+                }
                 Item.EffectCount = (int)nudEffectCount.Value;
                 Item.CanDeleted = cbCanDeleted.Checked;
                 Item.Icon = pbIcon.Image;
                 Item.Description = rtbDescription.Text;
+                this.DialogResult = DialogResult.OK;
             };
 
             btCancel = new Button
@@ -361,11 +431,19 @@ namespace ItemCreator
             Item = item;
             tbName.Text = Item.Name;
             cbType.SelectedIndex = Item.Type;
-            if ((Item.Effect != null) && (Item.Effect != ""))
+            if ((Item.Effect != null) && (Convert.ToString(Item.Effect) != ""))
             {
-                cbEffect.Items.Add(Item.Effect);
+                if (Addons.Enabled("MusicDiscs") && (Item.Type == 4))
+                {
+                    cbEffect.Items.Add("[Sound file]");
+                    cbEffect.Text = "[Sound file]";
+                }
+                else
+                {
+                    cbEffect.Items.Add(Item.Effect);
+                    cbEffect.Text = Convert.ToString(Item.Effect);
+                }
             }
-            cbEffect.Text = Item.Effect;
             nudEffectCount.Value = Item.EffectCount;
             cbCanDeleted.Checked = Item.CanDeleted;
             pbIcon.Image = Item.Icon;

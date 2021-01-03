@@ -26,7 +26,7 @@ namespace ItemCreator
         /// <summary>
         /// Item effect.
         /// </summary>
-        public string Effect { get; set; }
+        public object Effect { get; set; }
 
         /// <summary>
         /// Effect count.
@@ -112,8 +112,20 @@ namespace ItemCreator
                 {
                     using (var streamWriter = new StreamWriter(fileStream))
                     {
+                        foreach (string addon in Addons.AddonsList)
+                        {
+                            streamWriter.WriteLine("ADDON:" + addon);
+                        }
                         streamWriter.WriteLine("ItemType=" + @Type.ToString());
-                        streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
+                        if ((Addons.Enabled("MusicDiscs")) && (@Type == 4))
+                        {
+                            File.WriteAllBytes(path + "\\" + Name + "\\music.wav", (byte[])Effect);
+                            streamWriter.WriteLine("ItemEffect=music.wav");
+                        }
+                        else
+                        {
+                            streamWriter.WriteLine("ItemEffect=" + Effect.ToString());
+                        }
                         streamWriter.WriteLine("EffectCount=" + EffectCount.ToString());
                         streamWriter.WriteLine("Icon=img.png");
                         streamWriter.WriteLine("CanDeleted=" + Convert.ToInt32(CanDeleted).ToString());
@@ -164,13 +176,34 @@ namespace ItemCreator
                 string[] fileString = File.ReadAllLines(path + "\\init.dat");
                 foreach (string line in fileString)
                 {
+                    if (line.Contains("ADDON:"))
+                    {
+                        string[] addon = line.Split(':');
+
+                        if (!Addons.Enabled(addon[1]))
+                        {
+                            if (System.Windows.Forms.MessageBox.Show("The item was created or modified using an unplugged \"" + addon[1] +"\" addon. Errors may occur while importing continues. Do you want to continue?",
+                                "Unplugged addon",System.Windows.Forms.MessageBoxButtons.YesNo,System.Windows.Forms.MessageBoxIcon.Question) == System.Windows.Forms.DialogResult.No)
+                            {
+                                return;
+                            }
+                        }
+                    }
+
                     if (line.Contains("ItemType"))
                     {
                         @Type = Convert.ToUInt16(line.Substring(line.IndexOf('=') + 1));
                     }
                     else if (line.Contains("ItemEffect"))
                     {
-                        Effect = line.Substring(line.IndexOf('=') + 1);
+                        if ((Addons.Enabled("MusicDiscs")) && (@Type == 4))
+                        {
+                            Effect = File.ReadAllBytes(path + "\\" + line.Substring(line.IndexOf('=') + 1));
+                        }
+                        else
+                        {
+                            Effect = line.Substring(line.IndexOf('=') + 1);
+                        }
                     }
                     else if (line.Contains("EffectCount"))
                     {
