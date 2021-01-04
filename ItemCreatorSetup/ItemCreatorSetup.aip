@@ -178,10 +178,10 @@
     <ROW Property="ARPURLINFOABOUT" Value="https://stv233.pro/en/me/"/>
     <ROW Property="FILE_TO_LAUNCH" Value="[#ItemCreator.exe]"/>
     <ROW Property="Manufacturer" Value="Stv233.Pro"/>
-    <ROW Property="ProductCode" Value="1033:{2D920D93-5210-48B6-9BF0-183B489B14A3} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{015D8248-8291-4AD6-A9D0-6567BF83FBE5} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Item Creator"/>
-    <ROW Property="ProductVersion" Value="0.6.1" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.6.2" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{C2E9136B-711C-4B5D-AA33-8AA6FC64ED33}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>

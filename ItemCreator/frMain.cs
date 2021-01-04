@@ -39,6 +39,7 @@ namespace ItemCreator
             settings.Save();
 
             InitializeComponent();
+            InitializeChromium();
             projectControlPanel.Changed = false;
             projectControlPanel.Parent = this;
             projectControlPanel.Visible = false;
@@ -260,6 +261,7 @@ namespace ItemCreator
         {
             //Инициализировать настройки
             CefSettings settings = new CefSettings();
+            Cef.EnableHighDPISupport();
 
             settings.CachePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Stv233\ItemCreator\Page";
             settings.ProductVersion = "Chrome/75 Chrome/85.0.4183.83";
