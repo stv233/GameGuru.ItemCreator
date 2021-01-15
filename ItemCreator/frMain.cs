@@ -218,6 +218,42 @@ namespace ItemCreator
                     }
                 }
             };
+            this.KeyPreview = true;
+            this.KeyDown += (s, e) =>
+            {
+                if ((e.KeyCode == Keys.S) && (e.Control))
+                {
+                    if (saveToolStripMenuItem.Enabled)
+                    {
+                        saveToolStripMenuItem.PerformClick();
+                    }
+                }
+
+                if ((e.KeyCode == Keys.S) && (e.Control) && (e.Shift))
+                {
+                    if (saveAsToolStripMenuItem.Enabled)
+                    {
+                        saveAsToolStripMenuItem.PerformClick();
+                    }
+                }
+
+                if ((e.KeyCode == Keys.O)  && (e.Control))
+                {
+                    if (openToolStripMenuItem.Enabled)
+                    {
+                        openToolStripMenuItem.PerformClick();
+                    }
+                }
+
+                if ((e.KeyCode == Keys.N) && (e.Control))
+                {
+                    if (newToolStripMenuItem.Enabled)
+                    {
+                        newToolStripMenuItem.ShowDropDown();
+                    }
+                }
+            };
+
 
             OnResize(new EventArgs());
 
@@ -244,7 +280,7 @@ namespace ItemCreator
             musicDiscsToolStripMenuItem.Checked = new Properties.Addons().MusicDiscs;
         }
 
-        private async void frMain_Load(object sender,EventArgs e)
+        private async void frMain_Load(object sender, EventArgs e)
         {
             string page = await downloadStringAsync("https://github.com/stv233/ItemCreator/blob/master/ItemCreator/Page.txt?raw=true");
             if (!String.IsNullOrEmpty(page))
@@ -255,6 +291,7 @@ namespace ItemCreator
             {
                 wbBrowser.Load("https://stv233.pro/en/GameGuru-Scripts/");
             }
+
         }
 
         private void InitializeChromium()
@@ -279,7 +316,7 @@ namespace ItemCreator
             if (projectControlPanel.Changed == true)
             {
                 if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
-                    "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                    "New project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
                     return;
                 }
@@ -337,7 +374,7 @@ namespace ItemCreator
             if (projectControlPanel.Changed == true)
             {
                 if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
-                    "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                    "New project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
                     return;
                 }
@@ -395,7 +432,7 @@ namespace ItemCreator
             if (projectControlPanel.Changed == true)
             {
                 if (MessageBox.Show("There are unsaved changes in the project. If you continue, they will be lost. Do you want to continue?",
-                    "Open project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
+                    "New project?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.No)
                 {
                     return;
                 }

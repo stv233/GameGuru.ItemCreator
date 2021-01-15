@@ -69,7 +69,7 @@
             this.projectToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.projectToolStripMenuItem.Name = "projectToolStripMenuItem";
             this.projectToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
-            this.projectToolStripMenuItem.Text = "Project";
+            this.projectToolStripMenuItem.Text = "&Project";
             // 
             // newToolStripMenuItem
             // 
@@ -81,7 +81,10 @@
             this.newToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.newToolStripMenuItem.Name = "newToolStripMenuItem";
             this.newToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.newToolStripMenuItem.Text = "New";
+            this.newToolStripMenuItem.Text = "&New";
+            this.newToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+N";
+            this.newToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.N;
+            this.newToolStripMenuItem.Click += (s, e) => { this.newToolStripMenuItem.ShowDropDown(); };
             // 
             // simpleToolStripMenuItem
             // 
@@ -90,6 +93,7 @@
             this.simpleToolStripMenuItem.Name = "simpleToolStripMenuItem";
             this.simpleToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.simpleToolStripMenuItem.Text = "Simple inventory system project...";
+            this.simpleToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+N, S";
             this.simpleToolStripMenuItem.Click += new System.EventHandler(this.simpleToolStripMenuItem_Click);
             // 
             // proToolStripMenuItem
@@ -98,7 +102,8 @@
             this.proToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.proToolStripMenuItem.Name = "proToolStripMenuItem";
             this.proToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
-            this.proToolStripMenuItem.Text = "Inventory system PRO project...";
+            this.proToolStripMenuItem.Text = "Inventory system P&RO project...";
+            this.proToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+N, R";
             this.proToolStripMenuItem.Click += new System.EventHandler(this.proToolStripMenuItem_Click);
             // 
             // aIsToolStripMenuItem
@@ -108,6 +113,7 @@
             this.aIsToolStripMenuItem.Name = "aIsToolStripMenuItem";
             this.aIsToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.aIsToolStripMenuItem.Text = "Advanced inventory system project...";
+            this.aIsToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+N, A";
             this.aIsToolStripMenuItem.Click += new System.EventHandler(this.aIsToolStripMenuItem_Click);
             // 
             // openToolStripMenuItem
@@ -117,6 +123,8 @@
             this.openToolStripMenuItem.Name = "openToolStripMenuItem";
             this.openToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.openToolStripMenuItem.Text = "Open...";
+            this.openToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+O";
+            this.openToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O;
             this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
             // saveToolStripMenuItem
@@ -126,7 +134,9 @@
             this.saveToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
             this.saveToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Text = "&Save";
+            this.saveToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+S";
+            this.saveToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.O;
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
             // 
             // saveAsToolStripMenuItem
@@ -137,6 +147,8 @@
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
             this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
             this.saveAsToolStripMenuItem.Text = "Save as...";
+            this.saveAsToolStripMenuItem.ShortcutKeyDisplayString = "Ctrl+Shift+S";
+            this.saveAsToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift | System.Windows.Forms.Keys.S;
             this.saveAsToolStripMenuItem.Click += new System.EventHandler(this.saveAsToolStripMenuItem_Click);
             // 
             // closeToolStripMenuItem
