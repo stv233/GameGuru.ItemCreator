@@ -623,7 +623,10 @@ namespace ItemCreator
 
         private void projectControlPanel_ProjectCnanged(object sender,EventArgs e)
         {
+            if (!this.Text.Contains("*"))
+            {
                 this.Text += "*";
+            }
         }
 
         private void projectControlPanel_ProjectSaved(object sendser, EventArgs e)

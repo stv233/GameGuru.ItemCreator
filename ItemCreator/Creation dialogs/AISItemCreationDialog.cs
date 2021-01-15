@@ -143,7 +143,16 @@ namespace ItemCreator
                     nudEffectCount.Enabled = false;
                 }
                 else
-                {
+                {   
+                    if ((Addons.Enabled("MusicDiscs")) && (cbEffect.Items.Contains("[Sound file]")))
+                    {
+                        cbEffect.Items.Clear();
+                        cbEffect.Items.Add("[Sound file]");
+                    }
+                    else
+                    {
+                        cbEffect.Items.Clear();
+                    }
                     cbEffect.Items.Add("Heal");
                     cbEffect.Items.Add("AddLives");
                     cbEffect.Items.Add("SetHealth");
@@ -440,7 +449,10 @@ namespace ItemCreator
                 }
                 else
                 {
-                    cbEffect.Items.Add(Item.Effect);
+                    if (!cbEffect.Items.Contains(Item.Effect))
+                    {
+                        cbEffect.Items.Add(Item.Effect);
+                    }
                     cbEffect.Text = Convert.ToString(Item.Effect);
                 }
             }
