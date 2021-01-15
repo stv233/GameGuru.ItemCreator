@@ -2,6 +2,7 @@
 <DOCUMENT Type="Advanced Installer" CreateVersion="17.7" version="17.7" Modules="simple" RootPath="." Language="en" Id="{ADA4E2F8-E9E0-4FE6-904A-9F281EAA28C1}">
   <COMPONENT cid="caphyon.advinst.msicomp.MsiPropsComponent">
     <ROW Property="AI_BITMAP_DISPLAY_MODE" Value="0"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_AISDocumentation.pdf" Value="..\ItemCreator\bin\x86\Release\Resources"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.dll" Value="..\ItemCreator\bin\x86\Release\."/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb" Value="..\ItemCreator\bin\x86\Release\."/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.exe" Value="..\ItemCreator\bin\x86\Release\."/>
@@ -18,6 +19,8 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe" Value="..\ItemCreator\bin\x86\Release"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe.config" Value="..\ItemCreator\bin\x86\Release"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ItemCreator.pdb" Value="..\ItemCreator\bin\x86\Release"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_MusicDiscsDocumentation.pdf" Value="..\ItemCreator\bin\x86\Release\Resources"/>
+    <ROW Property="AI_PROPPATH_DIR_PERBUILD_ProDocumentation.pdf" Value="..\ItemCreator\bin\x86\Release\Resources"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_README.txt" Value="..\ItemCreator\bin\x86\Release\."/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_am.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_ar.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
@@ -87,6 +90,7 @@
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_vi.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_zhCN.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
     <ROW Property="AI_PROPPATH_DIR_PERBUILD_zhTW.pak" Value="..\ItemCreator\bin\x86\Release\.\locales"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_AISDocumentation.pdf" Value="AIS Documentation.pdf"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.dll" Value="CefSharp.BrowserSubprocess.Core.dll"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb" Value="CefSharp.BrowserSubprocess.Core.pdb"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.exe" Value="CefSharp.BrowserSubprocess.exe"/>
@@ -103,6 +107,8 @@
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe" Value="ItemCreator.exe"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe.config" Value="ItemCreator.exe.config"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.pdb" Value="ItemCreator.pdb"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_MusicDiscsDocumentation.pdf" Value="Music Discs Documentation.pdf"/>
+    <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ProDocumentation.pdf" Value="Inventory system PRO Documentation.pdf"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_README.txt" Value="README.txt"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_am.pak" Value="am.pak"/>
     <ROW Property="AI_PROPPATH_FILENAME_PERBUILD_ar.pak" Value="ar.pak"/>
@@ -178,10 +184,10 @@
     <ROW Property="ARPURLINFOABOUT" Value="https://stv233.pro/en/me/"/>
     <ROW Property="FILE_TO_LAUNCH" Value="[#ItemCreator.exe]"/>
     <ROW Property="Manufacturer" Value="Stv233.Pro"/>
-    <ROW Property="ProductCode" Value="1033:{015D8248-8291-4AD6-A9D0-6567BF83FBE5} " Type="16"/>
+    <ROW Property="ProductCode" Value="1033:{2128A8E0-B1F6-4B9D-B4DA-DFC33B80B394} " Type="16"/>
     <ROW Property="ProductLanguage" Value="1033"/>
     <ROW Property="ProductName" Value="Item Creator"/>
-    <ROW Property="ProductVersion" Value="0.6.2" Type="32"/>
+    <ROW Property="ProductVersion" Value="0.7.0" Type="32"/>
     <ROW Property="SecureCustomProperties" Value="OLDPRODUCTS;AI_NEWERPRODUCTFOUND"/>
     <ROW Property="UpgradeCode" Value="{C2E9136B-711C-4B5D-AA33-8AA6FC64ED33}"/>
     <ROW Property="WindowsType9X" MultiBuildValue="DefaultBuild:Windows 9x/ME" ValueLocId="-"/>
@@ -197,6 +203,7 @@
     <ROW Directory="APPDIR" Directory_Parent="TARGETDIR" DefaultDir="APPDIR:." IsPseudoRoot="1"/>
     <ROW Directory="DesktopFolder" Directory_Parent="TARGETDIR" DefaultDir="DESKTO~1|DesktopFolder" IsPseudoRoot="1"/>
     <ROW Directory="ItemCreator_Dir" Directory_Parent="APPDIR" DefaultDir="ITEMCR~1|ItemCreator"/>
+    <ROW Directory="Resources_Dir" Directory_Parent="ItemCreator_Dir" DefaultDir="RESOUR~1|Resources"/>
     <ROW Directory="SHORTCUTDIR" Directory_Parent="TARGETDIR" DefaultDir="SHORTC~1|SHORTCUTDIR" IsPseudoRoot="1"/>
     <ROW Directory="StartMenuFolder" Directory_Parent="TARGETDIR" DefaultDir="STARTM~1|StartMenuFolder" IsPseudoRoot="1"/>
     <ROW Directory="TARGETDIR" DefaultDir="SourceDir"/>
@@ -209,6 +216,7 @@
     <ROW Component="ItemCreator_ContentOutput_." ComponentId="{2DA2BCFD-2253-484F-A7F0-4AEEC42B02D5}" Directory_="__Dir" Attributes="0" KeyPath="cef.pak" Type="0"/>
     <ROW Component="ItemCreator_ContentOutput_._locales" ComponentId="{6BB1E3FA-D6BC-41E2-8D2B-4313ADABC62B}" Directory_="locales_Dir" Attributes="0" KeyPath="am.pak" Type="0"/>
     <ROW Component="ItemCreator_ContentOutput_._swiftshader" ComponentId="{514A7F3A-8CD0-4DCB-9A87-49C81CF64BB5}" Directory_="swiftshader_Dir" Attributes="0" KeyPath="libGLESv2.dll_1"/>
+    <ROW Component="ItemCreator_ContentOutput_Resources" ComponentId="{864EB326-6429-4B9E-BDFE-0CAC2E2C8A01}" Directory_="Resources_Dir" Attributes="0" KeyPath="MusicDiscsDocumentation.pdf" Type="0"/>
     <ROW Component="ItemCreator_PrimaryOutput" ComponentId="{2FD493D3-C147-4CD9-8959-0E3B6BED4EBB}" Directory_="ItemCreator_Dir" Attributes="0" KeyPath="ItemCreator.exe"/>
     <ROW Component="ItemCreator_SymbolsOutput" ComponentId="{11D4179F-399E-431E-A0C9-B4140CF40F0C}" Directory_="ItemCreator_Dir" Attributes="0" KeyPath="ItemCreator.pdb"/>
     <ROW Component="ProductInformation" ComponentId="{7DE1D310-130D-481C-AA54-41E49031E046}" Directory_="APPDIR" Attributes="4" KeyPath="Version"/>
@@ -304,8 +312,12 @@
     <ROW File="CefSharp.WinForms.pdb" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~5.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.WinForms.pdb&gt;" SelfReg="false"/>
     <ROW File="CefSharp.WinForms.XML" Component_="ItemCreator_ContentOutput_." FileName="CEFSHA~3.XML|[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.WinForms.XML]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_CefSharp.WinForms.XML&gt;" SelfReg="false"/>
     <ROW File="ItemCreator.pdb" Component_="ItemCreator_SymbolsOutput" FileName="ITEMCR~2.PDB|[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.pdb]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ItemCreator.pdb&gt;" SelfReg="false"/>
+    <ROW File="MusicDiscsDocumentation.pdf" Component_="ItemCreator_ContentOutput_Resources" FileName="MUSICD~2.PDF|[|AI_PROPPATH_FILENAME_PERBUILD_MusicDiscsDocumentation.pdf]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_MusicDiscsDocumentation.pdf&gt;" SelfReg="false"/>
+    <ROW File="ProDocumentation.pdf" Component_="ItemCreator_ContentOutput_Resources" FileName="PRODOC~2.PDF|[|AI_PROPPATH_FILENAME_PERBUILD_ProDocumentation.pdf]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_ProDocumentation.pdf&gt;" SelfReg="false"/>
+    <ROW File="AISDocumentation.pdf" Component_="ItemCreator_ContentOutput_Resources" FileName="AISDOC~2.PDF|[|AI_PROPPATH_FILENAME_PERBUILD_AISDocumentation.pdf]" Attributes="0" SourcePath="&lt;AI_APPPATH_PERBUILD_AISDocumentation.pdf&gt;" SelfReg="false"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.AppPathsComponent">
+    <ROW Name="AI_APPPATH_PERBUILD_AISDocumentation.pdf" Path="[|AI_PROPPATH_DIR_PERBUILD_AISDocumentation.pdf]\[|AI_PROPPATH_FILENAME_PERBUILD_AISDocumentation.pdf]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.Core.dll" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.dll]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.dll]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.Core.pdb]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_CefSharp.BrowserSubprocess.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_CefSharp.BrowserSubprocess.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_CefSharp.BrowserSubprocess.exe]" Type="2" Content="0"/>
@@ -322,6 +334,8 @@
     <ROW Name="AI_APPPATH_PERBUILD_ItemCreator.exe" Path="[|AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe]\[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_ItemCreator.exe.config" Path="[|AI_PROPPATH_DIR_PERBUILD_ItemCreator.exe.config]\[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.exe.config]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_ItemCreator.pdb" Path="[|AI_PROPPATH_DIR_PERBUILD_ItemCreator.pdb]\[|AI_PROPPATH_FILENAME_PERBUILD_ItemCreator.pdb]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_MusicDiscsDocumentation.pdf" Path="[|AI_PROPPATH_DIR_PERBUILD_MusicDiscsDocumentation.pdf]\[|AI_PROPPATH_FILENAME_PERBUILD_MusicDiscsDocumentation.pdf]" Type="2" Content="0"/>
+    <ROW Name="AI_APPPATH_PERBUILD_ProDocumentation.pdf" Path="[|AI_PROPPATH_DIR_PERBUILD_ProDocumentation.pdf]\[|AI_PROPPATH_FILENAME_PERBUILD_ProDocumentation.pdf]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_README.txt" Path="[|AI_PROPPATH_DIR_PERBUILD_README.txt]\[|AI_PROPPATH_FILENAME_PERBUILD_README.txt]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_am.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_am.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_am.pak]" Type="2" Content="0"/>
     <ROW Name="AI_APPPATH_PERBUILD_ar.pak" Path="[|AI_PROPPATH_DIR_PERBUILD_ar.pak]\[|AI_PROPPATH_FILENAME_PERBUILD_ar.pak]" Type="2" Content="0"/>
@@ -470,6 +484,7 @@
     <ROW Feature_="MainFeature" Component_="ItemCreator_ContentOutput_._locales"/>
     <ROW Feature_="MainFeature" Component_="ItemCreator_ContentOutput_._swiftshader"/>
     <ROW Feature_="MainFeature" Component_="ItemCreator_SymbolsOutput"/>
+    <ROW Feature_="MainFeature" Component_="ItemCreator_ContentOutput_Resources"/>
   </COMPONENT>
   <COMPONENT cid="caphyon.advinst.msicomp.MsiIconsComponent">
     <ROW Name="ico.exe" SourcePath="..\ItemCreator\ico.ico" Index="0"/>
@@ -596,5 +611,8 @@
     <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.WinForms.pdb"/>
     <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="CefSharp.WinForms.XML"/>
     <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="SymbolsOutput" OutputFile="ItemCreator.pdb"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="MusicDiscsDocumentation.pdf"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="ProDocumentation.pdf"/>
+    <ROW ProjectId="{0040b9c8-b837-44c7-8d34-a2c6e74c990d}" ProjectName="ItemCreator" OutputGroup="ContentOutput" OutputFile="AISDocumentation.pdf"/>
   </COMPONENT>
 </DOCUMENT>

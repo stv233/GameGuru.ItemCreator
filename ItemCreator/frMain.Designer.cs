@@ -42,6 +42,12 @@
             this.addonsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.musicDiscsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.supportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.documentationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aisHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aisDocHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.musicDicsHelpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.msMain.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,7 +57,8 @@
             this.msMain.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.projectToolStripMenuItem,
             this.settingToolStripMenuItem,
-            this.supportToolStripMenuItem});
+            this.supportToolStripMenuItem,
+            this.helpToolStripMenuItem});
             this.msMain.Location = new System.Drawing.Point(0, 0);
             this.msMain.Name = "msMain";
             this.msMain.Size = new System.Drawing.Size(284, 24);
@@ -197,6 +204,65 @@
             this.supportToolStripMenuItem.Text = "Support";
             this.supportToolStripMenuItem.Click += new System.EventHandler(this.supportToolStripMenuItem_Click);
             // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.documentationToolStripMenuItem});
+            this.helpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.helpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // documentationToolStripMenuItem
+            // 
+            this.documentationToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aisHelpToolStripMenuItem,
+            this.proHelpToolStripMenuItem});
+            this.documentationToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.documentationToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.documentationToolStripMenuItem.Text = "Documentation";
+            // 
+            // proHelpToolStripMenuItem
+            // 
+            this.proHelpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.proHelpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.proHelpToolStripMenuItem.Name = "proHelpToolStripMenuItem";
+            this.proHelpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.proHelpToolStripMenuItem.Text = "Inventory system PRO";
+            this.proHelpToolStripMenuItem.Click += (s, e) => {var fr = new System.Windows.Forms.Form(); fr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog; fr.Width = 800; fr.Height = 600; fr.Controls.Add(new CefSharp.WinForms.ChromiumWebBrowser(@"file:\\\Resources\Inventory system PRO Documentation.pdf")); fr.Show(); };
+            // 
+            // aisHelpToolStripMenuItem
+            // 
+            this.aisHelpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aisDocHelpToolStripMenuItem,
+            this.musicDicsHelpToolStripMenuItem});
+            this.aisHelpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.aisHelpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.aisHelpToolStripMenuItem.Name = "aisHelpToolStripMenuItem";
+            this.aisHelpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.aisHelpToolStripMenuItem.Text = "AIS";
+            // 
+            // aisDocHelpToolStripMenuItem
+            // 
+            this.aisDocHelpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.aisDocHelpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.aisDocHelpToolStripMenuItem.Name = "aisDocHelpToolStripMenuItem";
+            this.aisDocHelpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.aisDocHelpToolStripMenuItem.Text = "Advanced inventory system";
+            this.aisDocHelpToolStripMenuItem.Click += (s, e) => { var fr = new System.Windows.Forms.Form(); fr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog; fr.Width = 800; fr.Height = 600; fr.Controls.Add(new CefSharp.WinForms.ChromiumWebBrowser(@"file:\\\Resources\AIS Documentation.pdf")); fr.Show(); };
+            // 
+            // musicDicsHelpToolStripMenuItem
+            // 
+            this.musicDicsHelpToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.musicDicsHelpToolStripMenuItem.ForeColor = System.Drawing.Color.DarkGray;
+            this.musicDicsHelpToolStripMenuItem.Name = "musicDicsHelpToolStripMenuItem";
+            this.musicDicsHelpToolStripMenuItem.Size = new System.Drawing.Size(56, 20);
+            this.musicDicsHelpToolStripMenuItem.Text = "Advanced inventory system: Music Discs add-on";
+            this.musicDicsHelpToolStripMenuItem.Click += (s, e) => { var fr = new System.Windows.Forms.Form(); fr.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog; fr.Width = 800; fr.Height = 600; fr.Controls.Add(new CefSharp.WinForms.ChromiumWebBrowser(@"file:\\\Resources\Music Discs Documentation.pdf")); fr.Show(); };
+            // 
             // frMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -229,6 +295,12 @@
         private System.Windows.Forms.ToolStripMenuItem addonsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem musicDiscsToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem supportToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem documentationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem proHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aisHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aisDocHelpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem musicDicsHelpToolStripMenuItem;
     }
 }
 
