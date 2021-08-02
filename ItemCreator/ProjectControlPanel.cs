@@ -405,7 +405,8 @@ namespace ItemCreator
 
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
-                            Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            //Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            Project.UpdateItem(dialog.Item);
                             Changed = true;
                             ReloadItems();
                             return;
@@ -420,7 +421,8 @@ namespace ItemCreator
 
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
-                            Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            //Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            Project.UpdateItem(dialog.Item);
                             Changed = true;
                             ReloadItems();
                             return;
@@ -434,7 +436,8 @@ namespace ItemCreator
 
                         if (dialog.ShowDialog() == DialogResult.OK)
                         {
-                            Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            //Project.ListOfItems[dialog.Item.Name] = dialog.Item;
+                            Project.UpdateItem(dialog.Item);
                             Changed = true;
                             ReloadItems();
                             return;

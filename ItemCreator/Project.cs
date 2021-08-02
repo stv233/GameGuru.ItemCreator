@@ -177,9 +177,18 @@ namespace ItemCreator
         /// <param name="item"></param>
         public void AddItem(IItem item)
         {
-             string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\Stv233\\ItemCreator\\";
+            string appData = System.Environment.GetFolderPath(System.Environment.SpecialFolder.ApplicationData) + "\\Stv233\\ItemCreator\\";
             ListOfItems[item.Name] = item;
             item.Export(appData + "\\Projects\\" + Name);
+        }
+
+        /// <summary>
+        /// Updates an item in a project.
+        /// </summary>
+        /// <param name="item"></param>
+        public void UpdateItem(IItem item)
+        {
+            AddItem(item);
         }
     }
 }
